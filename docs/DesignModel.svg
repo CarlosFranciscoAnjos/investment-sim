@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="730px" preserveAspectRatio="none" style="width:2036px;height:730px;" version="1.1" viewBox="0 0 2036 730" width="2036px" zoomAndPan="magnify"><defs><filter height="300%" id="f1mu5okylnmhcb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[78bec0fde86ad92ec1dc3fb343b83709]
+class Email--><rect codeLine="3" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Email" style="stroke:#A80036;stroke-width:1.5;" width="65" x="993.5" y="7"/><ellipse cx="1008.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1011.4688,28.6406 Q1010.8906,28.9375 1010.25,29.0781 Q1009.6094,29.2344 1008.9063,29.2344 Q1006.4063,29.2344 1005.0781,27.5938 Q1003.7656,25.9375 1003.7656,22.8125 Q1003.7656,19.6875 1005.0781,18.0313 Q1006.4063,16.375 1008.9063,16.375 Q1009.6094,16.375 1010.25,16.5313 Q1010.9063,16.6875 1011.4688,16.9844 L1011.4688,19.7031 Q1010.8438,19.125 1010.25,18.8594 Q1009.6563,18.5781 1009.0313,18.5781 Q1007.6875,18.5781 1007,19.6563 Q1006.3125,20.7188 1006.3125,22.8125 Q1006.3125,24.9063 1007,25.9844 Q1007.6875,27.0469 1009.0313,27.0469 Q1009.6563,27.0469 1010.25,26.7813 Q1010.8438,26.5 1011.4688,25.9219 L1011.4688,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="1022.5" y="27.1543">Email</text><line style="stroke:#A80036;stroke-width:1.5;" x1="994.5" x2="1057.5" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="994.5" x2="1057.5" y1="47" y2="47"/><!--MD5=[e3d83ec5fd90ea9f3f2bfe265cb53458]
+class Status--><rect codeLine="6" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Status" style="stroke:#A80036;stroke-width:1.5;" width="73" x="661.5" y="155"/><ellipse cx="676.5" cy="171" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M680.6094,177 L672.8906,177 L672.8906,164.6094 L680.6094,164.6094 L680.6094,166.7656 L675.3438,166.7656 L675.3438,169.4375 L680.1094,169.4375 L680.1094,171.5938 L675.3438,171.5938 L675.3438,174.8438 L680.6094,174.8438 L680.6094,177 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="690.5" y="175.1543">Status</text><line style="stroke:#A80036;stroke-width:1.5;" x1="662.5" x2="733.5" y1="187" y2="187"/><line style="stroke:#A80036;stroke-width:1.5;" x1="662.5" x2="733.5" y1="195" y2="195"/><!--MD5=[0b83492021a2ada4b97aa2318f99f432]
+class Rate--><rect codeLine="9" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Rate" style="stroke:#A80036;stroke-width:1.5;" width="61" x="1721" y="358"/><ellipse cx="1736" cy="374" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1738.9688,379.6406 Q1738.3906,379.9375 1737.75,380.0781 Q1737.1094,380.2344 1736.4063,380.2344 Q1733.9063,380.2344 1732.5781,378.5938 Q1731.2656,376.9375 1731.2656,373.8125 Q1731.2656,370.6875 1732.5781,369.0313 Q1733.9063,367.375 1736.4063,367.375 Q1737.1094,367.375 1737.75,367.5313 Q1738.4063,367.6875 1738.9688,367.9844 L1738.9688,370.7031 Q1738.3438,370.125 1737.75,369.8594 Q1737.1563,369.5781 1736.5313,369.5781 Q1735.1875,369.5781 1734.5,370.6563 Q1733.8125,371.7188 1733.8125,373.8125 Q1733.8125,375.9063 1734.5,376.9844 Q1735.1875,378.0469 1736.5313,378.0469 Q1737.1563,378.0469 1737.75,377.7813 Q1738.3438,377.5 1738.9688,376.9219 L1738.9688,379.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="1750" y="378.1543">Rate</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1722" x2="1781" y1="390" y2="390"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1722" x2="1781" y1="398" y2="398"/><!--MD5=[ff3d20c1112759d46dde2fcead238479]
+class Value--><rect codeLine="12" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Value" style="stroke:#A80036;stroke-width:1.5;" width="67" x="1242" y="429"/><ellipse cx="1257" cy="445" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1259.9688,450.6406 Q1259.3906,450.9375 1258.75,451.0781 Q1258.1094,451.2344 1257.4063,451.2344 Q1254.9063,451.2344 1253.5781,449.5938 Q1252.2656,447.9375 1252.2656,444.8125 Q1252.2656,441.6875 1253.5781,440.0313 Q1254.9063,438.375 1257.4063,438.375 Q1258.1094,438.375 1258.75,438.5313 Q1259.4063,438.6875 1259.9688,438.9844 L1259.9688,441.7031 Q1259.3438,441.125 1258.75,440.8594 Q1258.1563,440.5781 1257.5313,440.5781 Q1256.1875,440.5781 1255.5,441.6563 Q1254.8125,442.7188 1254.8125,444.8125 Q1254.8125,446.9063 1255.5,447.9844 Q1256.1875,449.0469 1257.5313,449.0469 Q1258.1563,449.0469 1258.75,448.7813 Q1259.3438,448.5 1259.9688,447.9219 L1259.9688,450.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="1271" y="449.1543">Value</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1243" x2="1308" y1="461" y2="461"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1243" x2="1308" y1="469" y2="469"/><!--MD5=[ca8d74022477d15c65f63391dcd50b2e]
+class Income--><rect codeLine="15" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Income" style="stroke:#A80036;stroke-width:1.5;" width="77" x="1237" y="275"/><ellipse cx="1252" cy="291" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1254.9688,296.6406 Q1254.3906,296.9375 1253.75,297.0781 Q1253.1094,297.2344 1252.4063,297.2344 Q1249.9063,297.2344 1248.5781,295.5938 Q1247.2656,293.9375 1247.2656,290.8125 Q1247.2656,287.6875 1248.5781,286.0313 Q1249.9063,284.375 1252.4063,284.375 Q1253.1094,284.375 1253.75,284.5313 Q1254.4063,284.6875 1254.9688,284.9844 L1254.9688,287.7031 Q1254.3438,287.125 1253.75,286.8594 Q1253.1563,286.5781 1252.5313,286.5781 Q1251.1875,286.5781 1250.5,287.6563 Q1249.8125,288.7188 1249.8125,290.8125 Q1249.8125,292.9063 1250.5,293.9844 Q1251.1875,295.0469 1252.5313,295.0469 Q1253.1563,295.0469 1253.75,294.7813 Q1254.3438,294.5 1254.9688,293.9219 L1254.9688,296.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="1266" y="295.1543">Income</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1238" x2="1313" y1="307" y2="307"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1238" x2="1313" y1="315" y2="315"/><!--MD5=[b875eb2a6d4ff9e6a3852fd4edc20d45]
+class Expense--><rect codeLine="18" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Cost" style="stroke:#A80036;stroke-width:1.5;" width="60" x="1472.5" y="440"/><ellipse cx="1487.5" cy="456" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1490.4688,461.6406 Q1489.8906,461.9375 1489.25,462.0781 Q1488.6094,462.2344 1487.9063,462.2344 Q1485.4063,462.2344 1484.0781,460.5938 Q1482.7656,458.9375 1482.7656,455.8125 Q1482.7656,452.6875 1484.0781,451.0313 Q1485.4063,449.375 1487.9063,449.375 Q1488.6094,449.375 1489.25,449.5313 Q1489.9063,449.6875 1490.4688,449.9844 L1490.4688,452.7031 Q1489.8438,452.125 1489.25,451.8594 Q1488.6563,451.5781 1488.0313,451.5781 Q1486.6875,451.5781 1486,452.6563 Q1485.3125,453.7188 1485.3125,455.8125 Q1485.3125,457.9063 1486,458.9844 Q1486.6875,460.0469 1488.0313,460.0469 Q1488.6563,460.0469 1489.25,459.7813 Q1489.8438,459.5 1490.4688,458.9219 L1490.4688,461.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="1501.5" y="460.1543">Cost</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1473.5" x2="1531.5" y1="472" y2="472"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1473.5" x2="1531.5" y1="480" y2="480"/><!--MD5=[9d35236b92952560f647498cf8a29acb]
+class Term--><rect codeLine="21" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Term" style="stroke:#A80036;stroke-width:1.5;" width="63" x="1720" y="531"/><ellipse cx="1735" cy="547" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1737.9688,552.6406 Q1737.3906,552.9375 1736.75,553.0781 Q1736.1094,553.2344 1735.4063,553.2344 Q1732.9063,553.2344 1731.5781,551.5938 Q1730.2656,549.9375 1730.2656,546.8125 Q1730.2656,543.6875 1731.5781,542.0313 Q1732.9063,540.375 1735.4063,540.375 Q1736.1094,540.375 1736.75,540.5313 Q1737.4063,540.6875 1737.9688,540.9844 L1737.9688,543.7031 Q1737.3438,543.125 1736.75,542.8594 Q1736.1563,542.5781 1735.5313,542.5781 Q1734.1875,542.5781 1733.5,543.6563 Q1732.8125,544.7188 1732.8125,546.8125 Q1732.8125,548.9063 1733.5,549.9844 Q1734.1875,551.0469 1735.5313,551.0469 Q1736.1563,551.0469 1736.75,550.7813 Q1737.3438,550.5 1737.9688,549.9219 L1737.9688,552.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="1749" y="551.1543">Term</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1721" x2="1782" y1="563" y2="563"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1721" x2="1782" y1="571" y2="571"/><!--MD5=[9a160912c6721c583fbfee1b057cc0ee]
+class Euribor--><rect codeLine="24" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Euribor" style="stroke:#A80036;stroke-width:1.5;" width="77" x="1945" y="585"/><ellipse cx="1960" cy="601" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1962.9688,606.6406 Q1962.3906,606.9375 1961.75,607.0781 Q1961.1094,607.2344 1960.4063,607.2344 Q1957.9063,607.2344 1956.5781,605.5938 Q1955.2656,603.9375 1955.2656,600.8125 Q1955.2656,597.6875 1956.5781,596.0313 Q1957.9063,594.375 1960.4063,594.375 Q1961.1094,594.375 1961.75,594.5313 Q1962.4063,594.6875 1962.9688,594.9844 L1962.9688,597.7031 Q1962.3438,597.125 1961.75,596.8594 Q1961.1563,596.5781 1960.5313,596.5781 Q1959.1875,596.5781 1958.5,597.6563 Q1957.8125,598.7188 1957.8125,600.8125 Q1957.8125,602.9063 1958.5,603.9844 Q1959.1875,605.0469 1960.5313,605.0469 Q1961.1563,605.0469 1961.75,604.7813 Q1962.3438,604.5 1962.9688,603.9219 L1962.9688,606.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="1974" y="605.1543">Euribor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1946" x2="2021" y1="617" y2="617"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1946" x2="2021" y1="625" y2="625"/><!--MD5=[a1438430924b492079d6f1f94bb59006]
+class Spread--><rect codeLine="27" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Spread" style="stroke:#A80036;stroke-width:1.5;" width="77" x="1945" y="668"/><ellipse cx="1960" cy="684" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1962.9688,689.6406 Q1962.3906,689.9375 1961.75,690.0781 Q1961.1094,690.2344 1960.4063,690.2344 Q1957.9063,690.2344 1956.5781,688.5938 Q1955.2656,686.9375 1955.2656,683.8125 Q1955.2656,680.6875 1956.5781,679.0313 Q1957.9063,677.375 1960.4063,677.375 Q1961.1094,677.375 1961.75,677.5313 Q1962.4063,677.6875 1962.9688,677.9844 L1962.9688,680.7031 Q1962.3438,680.125 1961.75,679.8594 Q1961.1563,679.5781 1960.5313,679.5781 Q1959.1875,679.5781 1958.5,680.6563 Q1957.8125,681.7188 1957.8125,683.8125 Q1957.8125,685.9063 1958.5,686.9844 Q1959.1875,688.0469 1960.5313,688.0469 Q1961.1563,688.0469 1961.75,687.7813 Q1962.3438,687.5 1962.9688,686.9219 L1962.9688,689.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="1974" y="688.1543">Spread</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1946" x2="2021" y1="700" y2="700"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1946" x2="2021" y1="708" y2="708"/><!--MD5=[08bad9248af1ab5631dc74112499134c]
+class Balanceable--><rect codeLine="30" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="Balanceable" style="stroke:#A80036;stroke-width:1.5;" width="171" x="269" y="453"/><ellipse cx="311.9" cy="469" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M307.8219,464.7656 L307.8219,462.6094 L315.2125,462.6094 L315.2125,464.7656 L312.7438,464.7656 L312.7438,472.8438 L315.2125,472.8438 L315.2125,475 L307.8219,475 L307.8219,472.8438 L310.2906,472.8438 L310.2906,464.7656 L307.8219,464.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="77" x="332.1" y="473.1543">Balanceable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="270" x2="439" y1="485" y2="485"/><line style="stroke:#A80036;stroke-width:1.5;" x1="270" x2="439" y1="493" y2="493"/><ellipse cx="280" cy="504" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="289" y="507.2104">double calculateBalance()</text><ellipse cx="280" cy="516.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="289" y="520.0151">int compare()</text><!--MD5=[def02bc6a2f8ebcadab00557268fc905]
+class Rationable--><rect codeLine="35" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="112.0234" id="Rationable" style="stroke:#A80036;stroke-width:1.5;" width="163" x="273" y="290"/><ellipse cx="316.8" cy="306" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M312.7219,301.7656 L312.7219,299.6094 L320.1125,299.6094 L320.1125,301.7656 L317.6438,301.7656 L317.6438,309.8438 L320.1125,309.8438 L320.1125,312 L312.7219,312 L312.7219,309.8438 L315.1906,309.8438 L315.1906,301.7656 L312.7219,301.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="67" x="337.2" y="310.1543">Rationable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="274" x2="435" y1="322" y2="322"/><line style="stroke:#A80036;stroke-width:1.5;" x1="274" x2="435" y1="330" y2="330"/><ellipse cx="284" cy="341" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="293" y="344.2104">double totalValue()</text><ellipse cx="284" cy="353.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="293" y="357.0151">double totalDebt()</text><ellipse cx="284" cy="366.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="293" y="369.8198">double netWorth()</text><ellipse cx="284" cy="379.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="293" y="382.6245">double debtEquityRatio()</text><ellipse cx="284" cy="392.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="293" y="395.4292">int compare()</text><!--MD5=[99b8db98afdc2c8404e39242ef4c1e65]
+class Platform--><rect codeLine="43" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="60.8047" id="Platform" style="stroke:#A80036;stroke-width:1.5;" width="127" x="15.5" y="97.5"/><ellipse cx="49.85" cy="113.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M52.8188,119.1406 Q52.2406,119.4375 51.6,119.5781 Q50.9594,119.7344 50.2563,119.7344 Q47.7563,119.7344 46.4281,118.0938 Q45.1156,116.4375 45.1156,113.3125 Q45.1156,110.1875 46.4281,108.5313 Q47.7563,106.875 50.2563,106.875 Q50.9594,106.875 51.6,107.0313 Q52.2563,107.1875 52.8188,107.4844 L52.8188,110.2031 Q52.1938,109.625 51.6,109.3594 Q51.0063,109.0781 50.3813,109.0781 Q49.0375,109.0781 48.35,110.1563 Q47.6625,111.2188 47.6625,113.3125 Q47.6625,115.4063 48.35,116.4844 Q49.0375,117.5469 50.3813,117.5469 Q51.0063,117.5469 51.6,117.2813 Q52.1938,117 52.8188,116.4219 L52.8188,119.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="68.15" y="117.6543">Platform</text><line style="stroke:#A80036;stroke-width:1.5;" x1="16.5" x2="141.5" y1="129.5" y2="129.5"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="23.5" y="137.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="35.5" y="143.7104">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="16.5" x2="141.5" y1="150.3047" y2="150.3047"/><!--MD5=[3fd616f346a44cd59a91eb10b19e157c]
+class User--><rect codeLine="47" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="User" style="stroke:#A80036;stroke-width:1.5;" width="96" x="650" y="42"/><ellipse cx="680.75" cy="58" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M683.7188,63.6406 Q683.1406,63.9375 682.5,64.0781 Q681.8594,64.2344 681.1563,64.2344 Q678.6563,64.2344 677.3281,62.5938 Q676.0156,60.9375 676.0156,57.8125 Q676.0156,54.6875 677.3281,53.0313 Q678.6563,51.375 681.1563,51.375 Q681.8594,51.375 682.5,51.5313 Q683.1563,51.6875 683.7188,51.9844 L683.7188,54.7031 Q683.0938,54.125 682.5,53.8594 Q681.9063,53.5781 681.2813,53.5781 Q679.9375,53.5781 679.25,54.6563 Q678.5625,55.7188 678.5625,57.8125 Q678.5625,59.9063 679.25,60.9844 Q679.9375,62.0469 681.2813,62.0469 Q681.9063,62.0469 682.5,61.7813 Q683.0938,61.5 683.7188,60.9219 L683.7188,63.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="698.25" y="62.1543">User</text><line style="stroke:#A80036;stroke-width:1.5;" x1="651" x2="745" y1="74" y2="74"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="658" y="82"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="670" y="88.2104">String name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="658" y="94.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="670" y="101.0151">String hash</text><line style="stroke:#A80036;stroke-width:1.5;" x1="651" x2="745" y1="107.6094" y2="107.6094"/><!--MD5=[45d42ff7800d812d5f83c7d3273eb427]
+class UserRole--><rect codeLine="52" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="UserRole" style="stroke:#A80036;stroke-width:1.5;" width="127" x="962.5" y="90"/><ellipse cx="995.05" cy="106" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M998.0188,111.6406 Q997.4406,111.9375 996.8,112.0781 Q996.1594,112.2344 995.4563,112.2344 Q992.9563,112.2344 991.6281,110.5938 Q990.3156,108.9375 990.3156,105.8125 Q990.3156,102.6875 991.6281,101.0313 Q992.9563,99.375 995.4563,99.375 Q996.1594,99.375 996.8,99.5313 Q997.4563,99.6875 998.0188,99.9844 L998.0188,102.7031 Q997.3938,102.125 996.8,101.8594 Q996.2063,101.5781 995.5813,101.5781 Q994.2375,101.5781 993.55,102.6563 Q992.8625,103.7188 992.8625,105.8125 Q992.8625,107.9063 993.55,108.9844 Q994.2375,110.0469 995.5813,110.0469 Q996.2063,110.0469 996.8,109.7813 Q997.3938,109.5 998.0188,108.9219 L998.0188,111.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="1012.95" y="110.1543">UserRole</text><line style="stroke:#A80036;stroke-width:1.5;" x1="963.5" x2="1088.5" y1="122" y2="122"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="970.5" y="130"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="982.5" y="136.2104">String role</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="970.5" y="142.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="982.5" y="149.0151">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="963.5" x2="1088.5" y1="155.6094" y2="155.6094"/><!--MD5=[873670755c6433d3512a8b316aa6820d]
+class UserAccount--><rect codeLine="57" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="UserAccount" style="stroke:#A80036;stroke-width:1.5;" width="137" x="286" y="145"/><ellipse cx="312.25" cy="161" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M315.2188,166.6406 Q314.6406,166.9375 314,167.0781 Q313.3594,167.2344 312.6563,167.2344 Q310.1563,167.2344 308.8281,165.5938 Q307.5156,163.9375 307.5156,160.8125 Q307.5156,157.6875 308.8281,156.0313 Q310.1563,154.375 312.6563,154.375 Q313.3594,154.375 314,154.5313 Q314.6563,154.6875 315.2188,154.9844 L315.2188,157.7031 Q314.5938,157.125 314,156.8594 Q313.4063,156.5781 312.7813,156.5781 Q311.4375,156.5781 310.75,157.6563 Q310.0625,158.7188 310.0625,160.8125 Q310.0625,162.9063 310.75,163.9844 Q311.4375,165.0469 312.7813,165.0469 Q313.4063,165.0469 314,164.7813 Q314.5938,164.5 315.2188,163.9219 L315.2188,166.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="328.75" y="165.1543">UserAccount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="287" x2="422" y1="177" y2="177"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="294" y="185"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="306" y="191.2104">creationDate</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="294" y="197.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="306" y="204.0151">int simulationsLimit</text><line style="stroke:#A80036;stroke-width:1.5;" x1="287" x2="422" y1="210.6094" y2="210.6094"/><!--MD5=[54fabb3df793f28b5ea3d7a77d045622]
+class FinancialSimulation--><rect codeLine="62" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="FinancialSimulation" style="stroke:#A80036;stroke-width:1.5;" width="152" x="622" y="347"/><ellipse cx="637" cy="363" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M639.9688,368.6406 Q639.3906,368.9375 638.75,369.0781 Q638.1094,369.2344 637.4063,369.2344 Q634.9063,369.2344 633.5781,367.5938 Q632.2656,365.9375 632.2656,362.8125 Q632.2656,359.6875 633.5781,358.0313 Q634.9063,356.375 637.4063,356.375 Q638.1094,356.375 638.75,356.5313 Q639.4063,356.6875 639.9688,356.9844 L639.9688,359.7031 Q639.3438,359.125 638.75,358.8594 Q638.1563,358.5781 637.5313,358.5781 Q636.1875,358.5781 635.5,359.6563 Q634.8125,360.7188 634.8125,362.8125 Q634.8125,364.9063 635.5,365.9844 Q636.1875,367.0469 637.5313,367.0469 Q638.1563,367.0469 638.75,366.7813 Q639.3438,366.5 639.9688,365.9219 L639.9688,368.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="120" x="651" y="367.1543">FinancialSimulation</text><line style="stroke:#A80036;stroke-width:1.5;" x1="623" x2="773" y1="379" y2="379"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="630" y="387"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="642" y="393.2104">String id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="630" y="399.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="642" y="406.0151">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="623" x2="773" y1="412.6094" y2="412.6094"/><!--MD5=[751a80e395721099d806782fc3bbd655]
+class Asset--><rect codeLine="67" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="Asset" style="stroke:#A80036;stroke-width:1.5;" width="127" x="962.5" y="339"/><ellipse cx="1004.5" cy="355" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1007.4688,360.6406 Q1006.8906,360.9375 1006.25,361.0781 Q1005.6094,361.2344 1004.9063,361.2344 Q1002.4063,361.2344 1001.0781,359.5938 Q999.7656,357.9375 999.7656,354.8125 Q999.7656,351.6875 1001.0781,350.0313 Q1002.4063,348.375 1004.9063,348.375 Q1005.6094,348.375 1006.25,348.5313 Q1006.9063,348.6875 1007.4688,348.9844 L1007.4688,351.7031 Q1006.8438,351.125 1006.25,350.8594 Q1005.6563,350.5781 1005.0313,350.5781 Q1003.6875,350.5781 1003,351.6563 Q1002.3125,352.7188 1002.3125,354.8125 Q1002.3125,356.9063 1003,357.9844 Q1003.6875,359.0469 1005.0313,359.0469 Q1005.6563,359.0469 1006.25,358.7813 Q1006.8438,358.5 1007.4688,357.9219 L1007.4688,360.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="1024.5" y="359.1543">Asset</text><line style="stroke:#A80036;stroke-width:1.5;" x1="963.5" x2="1088.5" y1="371" y2="371"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="970.5" y="379"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="982.5" y="385.2104">String id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="970.5" y="391.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="982.5" y="398.0151">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="963.5" x2="1088.5" y1="404.6094" y2="404.6094"/><!--MD5=[3a321751f1376ef14e03f4e38667892c]
+class Liability--><rect codeLine="72" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="Liability" style="stroke:#A80036;stroke-width:1.5;" width="127" x="1212" y="512"/><ellipse cx="1249.5" cy="528" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1252.4688,533.6406 Q1251.8906,533.9375 1251.25,534.0781 Q1250.6094,534.2344 1249.9063,534.2344 Q1247.4063,534.2344 1246.0781,532.5938 Q1244.7656,530.9375 1244.7656,527.8125 Q1244.7656,524.6875 1246.0781,523.0313 Q1247.4063,521.375 1249.9063,521.375 Q1250.6094,521.375 1251.25,521.5313 Q1251.9063,521.6875 1252.4688,521.9844 L1252.4688,524.7031 Q1251.8438,524.125 1251.25,523.8594 Q1250.6563,523.5781 1250.0313,523.5781 Q1248.6875,523.5781 1248,524.6563 Q1247.3125,525.7188 1247.3125,527.8125 Q1247.3125,529.9063 1248,530.9844 Q1248.6875,532.0469 1250.0313,532.0469 Q1250.6563,532.0469 1251.25,531.7813 Q1251.8438,531.5 1252.4688,530.9219 L1252.4688,533.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="1268.5" y="532.1543">Liability</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1213" x2="1338" y1="544" y2="544"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1220" y="552"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="1232" y="558.2104">String id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1220" y="564.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="1232" y="571.0151">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1213" x2="1338" y1="577.6094" y2="577.6094"/><!--MD5=[8c90e17f845694663a18abdfbeae235d]
+class Loan--><rect codeLine="77" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="60.8047" id="Loan" style="stroke:#A80036;stroke-width:1.5;" width="111" x="1447" y="523.5"/><ellipse cx="1484.05" cy="539.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1487.0188,545.1406 Q1486.4406,545.4375 1485.8,545.5781 Q1485.1594,545.7344 1484.4563,545.7344 Q1481.9563,545.7344 1480.6281,544.0938 Q1479.3156,542.4375 1479.3156,539.3125 Q1479.3156,536.1875 1480.6281,534.5313 Q1481.9563,532.875 1484.4563,532.875 Q1485.1594,532.875 1485.8,533.0313 Q1486.4563,533.1875 1487.0188,533.4844 L1487.0188,536.2031 Q1486.3938,535.625 1485.8,535.3594 Q1485.2063,535.0781 1484.5813,535.0781 Q1483.2375,535.0781 1482.55,536.1563 Q1481.8625,537.2188 1481.8625,539.3125 Q1481.8625,541.4063 1482.55,542.4844 Q1483.2375,543.5469 1484.5813,543.5469 Q1485.2063,543.5469 1485.8,543.2813 Q1486.3938,543 1487.0188,542.4219 L1487.0188,545.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="1502.95" y="543.6543">Loan</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1448" x2="1557" y1="555.5" y2="555.5"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1455" y="563.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="1467" y="569.7104">double amount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1448" x2="1557" y1="576.3047" y2="576.3047"/><!--MD5=[bd6c30e4379de9ee51633f79752e7bb6]
+class IndexedLoan--><rect codeLine="81" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="73.6094" id="IndexedLoan" style="stroke:#A80036;stroke-width:1.5;" width="111" x="1696" y="614"/><ellipse cx="1711" cy="630" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1713.9688,635.6406 Q1713.3906,635.9375 1712.75,636.0781 Q1712.1094,636.2344 1711.4063,636.2344 Q1708.9063,636.2344 1707.5781,634.5938 Q1706.2656,632.9375 1706.2656,629.8125 Q1706.2656,626.6875 1707.5781,625.0313 Q1708.9063,623.375 1711.4063,623.375 Q1712.1094,623.375 1712.75,623.5313 Q1713.4063,623.6875 1713.9688,623.9844 L1713.9688,626.7031 Q1713.3438,626.125 1712.75,625.8594 Q1712.1563,625.5781 1711.5313,625.5781 Q1710.1875,625.5781 1709.5,626.6563 Q1708.8125,627.7188 1708.8125,629.8125 Q1708.8125,631.9063 1709.5,632.9844 Q1710.1875,634.0469 1711.5313,634.0469 Q1712.1563,634.0469 1712.75,633.7813 Q1713.3438,633.5 1713.9688,632.9219 L1713.9688,635.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="79" x="1725" y="634.1543">IndexedLoan</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1697" x2="1806" y1="646" y2="646"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1704" y="654"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="83" x="1716" y="660.2104">double euribor</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1704" y="666.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="1716" y="673.0151">double spread</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1697" x2="1806" y1="679.6094" y2="679.6094"/><!--MD5=[a0a8edbf0a7def481611cdbbe63eb7e3]
+class CompoundService--><rect codeLine="86" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="CompoundService" style="stroke:#A80036;stroke-width:1.5;" width="144" x="7" y="14"/><ellipse cx="22" cy="30" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.9688,35.6406 Q24.3906,35.9375 23.75,36.0781 Q23.1094,36.2344 22.4063,36.2344 Q19.9063,36.2344 18.5781,34.5938 Q17.2656,32.9375 17.2656,29.8125 Q17.2656,26.6875 18.5781,25.0313 Q19.9063,23.375 22.4063,23.375 Q23.1094,23.375 23.75,23.5313 Q24.4063,23.6875 24.9688,23.9844 L24.9688,26.7031 Q24.3438,26.125 23.75,25.8594 Q23.1563,25.5781 22.5313,25.5781 Q21.1875,25.5781 20.5,26.6563 Q19.8125,27.7188 19.8125,29.8125 Q19.8125,31.9063 20.5,32.9844 Q21.1875,34.0469 22.5313,34.0469 Q23.1563,34.0469 23.75,33.7813 Q24.3438,33.5 24.9688,32.9219 L24.9688,35.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="112" x="36" y="34.1543">CompoundService</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="150" y1="46" y2="46"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="150" y1="54" y2="54"/><!--MD5=[6550b3328119fb320e177637455e5670]
+class CheckingAccount--><rect codeLine="89" fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="60.8047" id="CheckingAccount" style="stroke:#A80036;stroke-width:1.5;" width="140" x="956" y="450.5"/><ellipse cx="971" cy="466.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M973.9688,472.1406 Q973.3906,472.4375 972.75,472.5781 Q972.1094,472.7344 971.4063,472.7344 Q968.9063,472.7344 967.5781,471.0938 Q966.2656,469.4375 966.2656,466.3125 Q966.2656,463.1875 967.5781,461.5313 Q968.9063,459.875 971.4063,459.875 Q972.1094,459.875 972.75,460.0313 Q973.4063,460.1875 973.9688,460.4844 L973.9688,463.2031 Q973.3438,462.625 972.75,462.3594 Q972.1563,462.0781 971.5313,462.0781 Q970.1875,462.0781 969.5,463.1563 Q968.8125,464.2188 968.8125,466.3125 Q968.8125,468.4063 969.5,469.4844 Q970.1875,470.5469 971.5313,470.5469 Q972.1563,470.5469 972.75,470.2813 Q973.3438,470 973.9688,469.4219 L973.9688,472.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="108" x="985" y="470.6543">CheckingAccount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="957" x2="1095" y1="482.5" y2="482.5"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="964" y="490.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="976" y="496.7104">String description</text><line style="stroke:#A80036;stroke-width:1.5;" x1="957" x2="1095" y1="503.3047" y2="503.3047"/><!--MD5=[2770d511fa22a6a61bb54ccdb4cbf396]
+class Amount--><rect fill="#FEFECE" filter="url(#f1mu5okylnmhcb)" height="48" id="Amount" style="stroke:#A80036;stroke-width:1.5;" width="80" x="1711.5" y="448"/><ellipse cx="1726.5" cy="464" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1729.4688,469.6406 Q1728.8906,469.9375 1728.25,470.0781 Q1727.6094,470.2344 1726.9063,470.2344 Q1724.4063,470.2344 1723.0781,468.5938 Q1721.7656,466.9375 1721.7656,463.8125 Q1721.7656,460.6875 1723.0781,459.0313 Q1724.4063,457.375 1726.9063,457.375 Q1727.6094,457.375 1728.25,457.5313 Q1728.9063,457.6875 1729.4688,457.9844 L1729.4688,460.7031 Q1728.8438,460.125 1728.25,459.8594 Q1727.6563,459.5781 1727.0313,459.5781 Q1725.6875,459.5781 1725,460.6563 Q1724.3125,461.7188 1724.3125,463.8125 Q1724.3125,465.9063 1725,466.9844 Q1725.6875,468.0469 1727.0313,468.0469 Q1727.6563,468.0469 1728.25,467.7813 Q1728.8438,467.5 1729.4688,466.9219 L1729.4688,469.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="1740.5" y="468.1543">Amount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1712.5" x2="1790.5" y1="480" y2="480"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1712.5" x2="1790.5" y1="488" y2="488"/><!--MD5=[17f44c58616ed09a2692c9a48bb2876c]
+reverse link Balanceable to Asset--><path codeLine="96" d="M460.2479,490.1926 C601.4879,489.2157 843.5055,482.8754 926,452 C932.4331,449.5923 956.7585,431.1438 979.805,413.0279 " fill="none" id="Balanceable-backto-Asset" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="460.2087,497.1928,440.1714,490.3001,460.1336,483.193,460.2087,497.1928" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8f4f1bc2365873a1d73e416e6fe732f5]
+reverse link Balanceable to Liability--><path codeLine="97" d="M459.8287,511.6599 C463.2538,512.145 466.651,512.5941 470,513 C744.6323,546.2858 1075.2785,549.634 1211.7913,549.4303 " fill="none" id="Balanceable-backto-Liability" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="458.7107,518.5702,440.046,508.5389,460.8925,504.7412,458.7107,518.5702" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5e1b434380064d115a53119e5e200d18]
+reverse link Balanceable to CheckingAccount--><path codeLine="98" d="M460.3742,499.5295 C463.6184,499.7053 466.8329,499.8632 470,500 C672.4777,508.7489 724.2258,518.9986 926,500 C935.6766,499.0889 945.8111,497.6922 955.7601,496.0608 " fill="none" id="Balanceable-backto-CheckingAccount" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="459.7422,506.5036,440.2256,498.2512,460.6287,492.5317,459.7422,506.5036" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f233b9347ab448a28bb11d9bd6241d90]
+reverse link Balanceable to FinancialSimulation--><path codeLine="99" d="M459.3549,451.4872 C462.9402,450.2929 466.4962,449.1271 470,448 C520.1948,431.854 577.3196,415.8229 621.8332,403.844 " fill="none" id="Balanceable-backto-FinancialSimulation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="461.2213,458.2468,440.0322,458.087,456.6961,444.9982,461.2213,458.2468" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[dbde3897d483c9356adf1e43e52dd79c]
+reverse link Rationable to Asset--><path codeLine="101" d="M456.0553,338.0241 C506.0021,334.4897 567.1199,330.7421 622,329 C689.5215,326.8566 706.6687,323.4998 774,329 C842.2359,334.5741 858.766,341.0848 926,354 C937.7836,356.2636 950.3054,358.8629 962.357,361.4637 " fill="none" id="Rationable-backto-Asset" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="456.545,345.0069,436.0923,339.467,455.5356,331.0433,456.545,345.0069" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[524c65f3e7b707a17b9e1c4db9a9de9e]
+reverse link Rationable to FinancialSimulation--><path codeLine="102" d="M456.4459,357.2779 C509.4392,363.1403 573.1167,370.1847 621.785,375.5686 " fill="none" id="Rationable-backto-FinancialSimulation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="455.4494,364.2104,436.3404,355.0537,456.9888,350.2953,455.4494,364.2104" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0cdafcc0dad84b6396b2a91da681dfee]
+link Platform to User--><path codeLine="106" d="M142.6603,122.9462 C220.0423,116.8046 354.5992,106.13 470,97 C529.8388,92.2658 598.5128,86.846 644.7204,83.2012 " fill="none" id="Platform-to-User" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="649.9609,82.7879,640.6743,79.5079,644.9764,83.181,641.3033,87.4832,649.9609,82.7879" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="92" x="308.5" y="96.0669">has registered</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="150.4835" y="135.3149">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="635.069" y="79.3265">*</text><!--MD5=[16d1f4bd67b8e708914c12568bcf70bf]
+link Platform to UserAccount--><path codeLine="107" d="M142.5512,140.4565 C183.8646,148.5542 237.87,159.1397 281.0261,167.5986 " fill="none" id="Platform-to-UserAccount" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="285.966,168.5668,277.9036,162.9102,281.0594,167.6049,276.3646,170.7607,285.966,168.5668" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="182" y="145.0669">supports</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="150.3618" y="154.8498">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="271.0873" y="180.0134">*</text><!--MD5=[1f12d177c84922ed4f166f09ee62ceaa]
+link User to UserRole--><path codeLine="109" d="M746.0453,86.031 C801.6886,94.1739 893.7934,107.6527 957.0647,116.9119 " fill="none" id="User-to-UserRole" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="962.331,117.6826,954.0052,112.4214,957.3837,116.9585,952.8466,120.337,962.331,117.6826" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="836" y="91.0669">preforms</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="753.9382" y="100.363">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="946.5068" y="129.5696">1</text><!--MD5=[dbc364445409b51c9b407d19a07b4adf]
+link User to Email--><path codeLine="110" d="M746.0453,71.969 C811.6814,62.3637 928.0507,45.334 987.9847,36.5632 " fill="none" id="User-to-Email" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="993.2541,35.7921,983.7697,33.1377,988.3068,36.5162,984.9283,41.0534,993.2541,35.7921" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="120" x="805" y="43.0669">is characterized by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="754.0147" y="84.1478">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="977.6753" y="50.4079">1</text><!--MD5=[837b242c1ca256f3a9e0c21142993ab4]
+link UserAccount to User--><path codeLine="112" d="M423.0495,165.2563 C470.7447,153.1858 535.6369,135.9234 592,118 C609.4225,112.4597 628.2143,105.7819 645.0671,99.5302 " fill="none" id="UserAccount-to-User" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="649.7663,97.7794,639.9361,97.1731,645.0809,99.525,642.729,104.6697,649.7663,97.7794" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="483" y="114.0669">has associated</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="430.9846" y="176.3408">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="634.0945" y="113.7445">1</text><!--MD5=[7221d6b1469a588f4657e2a5a7d974b3]
+link UserAccount to Status--><path codeLine="113" d="M423.1868,181.4001 C492.7448,180.7926 598.0923,179.8726 656.0684,179.3662 " fill="none" id="UserAccount-to-Status" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="661.186,179.3215,652.1514,175.4003,656.1862,179.3652,652.2213,183.4,661.186,179.3215" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="120" x="471" y="176.0669">is characterized by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="431.1369" y="194.2503">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="645.4058" y="192.892">1</text><!--MD5=[f0303e15dad37c1e5c0bff93b8265192]
+link UserAccount to FinancialSimulation--><path codeLine="114" d="M417.5032,219.0499 C477.8399,254.5318 568.5947,307.9014 630.4153,344.2558 " fill="none" id="UserAccount-to-FinancialSimulation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="634.8155,346.8435,629.0852,338.8333,630.5055,344.3089,625.0299,345.7293,634.8155,346.8435" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="34" x="514" y="250.0669">holds</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="419.2756" y="238.5387">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="615.9373" y="336.0026">*</text><!--MD5=[3fd22e08828824e855827377769b8f7d]
+link FinancialSimulation to Asset--><path codeLine="116" d="M774.0742,382.1445 C829.4408,380.7941 903.7897,378.9807 957.3497,377.6744 " fill="none" id="FinancialSimulation-to-Asset" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="962.4667,377.5496,953.3718,373.7704,957.4682,377.6716,953.567,381.768,962.4667,377.5496" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="853.5" y="375.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="781.9565" y="394.7928">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="947.297" y="390.7513">*</text><!--MD5=[04175207d6ca867bcf82b00930262866]
+link FinancialSimulation to CheckingAccount--><path codeLine="117" d="M774.0742,406.4976 C827.2408,422.2206 897.9112,443.1201 950.8691,458.7814 " fill="none" id="FinancialSimulation-to-CheckingAccount" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="955.9376,460.2803,948.4416,453.892,951.1429,458.8622,946.1727,461.5635,955.9376,460.2803" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="853.5" y="412.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="781.9565" y="421.5431">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="939.837" y="470.9192">1</text><!--MD5=[b846356768c65f8c81fafe4df9acb34b]
+link Asset to Liability--><path codeLine="119" d="M1071.6229,413.0256 C1079.7546,419.6604 1088.1373,426.523 1096,433 C1109.3962,444.0353 1111.8819,447.9047 1126,458 C1151.8179,476.4614 1181.4572,495.0078 1207.5009,510.4962 " fill="none" id="Asset-to-Liability" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1211.9834,513.153,1206.2807,505.1231,1207.6822,510.6036,1202.2017,512.0051,1211.9834,513.153" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="1142.5" y="454.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1070.7768" y="432.7903">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1196.8158" y="521.797">*</text><!--MD5=[29c0987a1fcc63cd7d9cb6b033a203cc]
+link Asset to Value--><path codeLine="120" d="M1089.6193,405.4052 C1101.5614,410.3367 1114.0506,415.1081 1126,419 C1162.8445,431 1206.1299,440.347 1236.616,446.1777 " fill="none" id="Asset-to-Value" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1241.7748,447.1542,1233.6758,441.55,1236.862,446.2242,1232.1879,449.4104,1241.7748,447.1542" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="1129.5" y="415.0669">is worth</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1097.4378" y="421.7695">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1225.994" y="459.576">1</text><!--MD5=[1313a3524ff723bcb05e0489d295b759]
+link Asset to Income--><path codeLine="121" d="M1089.6049,356.3704 C1134.0965,342.6396 1192.3736,324.6543 1231.7239,312.51 " fill="none" id="Asset-to-Income" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1236.9068,310.9105,1227.1274,309.7427,1232.1292,312.3851,1229.4868,317.3868,1236.9068,310.9105" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="54" x="1127" y="325.0669">provides</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1097.4217" y="367.0651">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1221.0537" y="326.5684">1</text><!--MD5=[692138bde0e61ab70c4aea3c5a3a59cf]
+link Asset to Rate--><path codeLine="122" d="M1089.7474,376.5272 C1237.638,377.7503 1600.2437,380.7491 1715.625,381.7033 " fill="none" id="Asset-to-Rate" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1720.9306,381.7472,1711.9641,377.6728,1715.9308,381.7058,1711.8978,385.6725,1720.9306,381.7472" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="46" x="1370" y="375.0669">returns</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1097.5807" y="389.5525">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1704.9364" y="395.5054">1</text><!--MD5=[1abfbf879ad190fd334b4d56593fa000]
+link Liability to Expense--><path codeLine="124" d="M1339.034,525.2097 C1380.5384,509.6684 1433.1799,489.9569 1467.3385,477.1662 " fill="none" id="Liability-to-Cost" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1472.2407,475.3306,1462.4095,474.7407,1467.5582,477.084,1465.215,482.2327,1472.2407,475.3306" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="1381.5" y="492.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1346.8426" y="535.4233">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1456.3182" y="491.7674">1</text><!--MD5=[b663e79a0db977cc109cb19e5df28729]
+link Loan to Amount--><path codeLine="126" d="M1558.0705,535.6997 C1602.696,521.0037 1664.5745,500.6261 1706.2215,486.911 " fill="none" id="Loan-to-Amount" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1711.1976,485.2723,1701.398,484.2882,1706.4485,486.8363,1703.9004,491.8868,1711.1976,485.2723" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="12" x="1621" y="496.0669">of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1566.0753" y="546.3374">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1695.5831" y="500.9208">1</text><!--MD5=[ed1bb4ae72ec1d676ee9d39b1838e346]
+link Loan to Term--><path codeLine="127" d="M1558.0705,554.2232 C1605.7668,554.4147 1673.172,554.6854 1714.5192,554.8515 " fill="none" id="Loan-to-Term" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1719.6779,554.8722,1710.6941,550.836,1714.6779,554.8521,1710.6619,558.8359,1719.6779,554.8722" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="1615.5" y="550.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1566.0753" y="567.3499">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1703.8418" y="568.5663">1</text><!--MD5=[cf8d5080fecd9e836dea0a113f02d882]
+link Loan to Rate--><path codeLine="128" d="M1538.7397,523.4723 C1545.2427,517.7651 1551.8908,511.7766 1558,506 C1571.9313,492.8271 1572.8473,486.7474 1588,475 C1629.0012,443.213 1682.0798,415.0629 1716.4558,398.2773 " fill="none" id="Loan-to-Rate" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1720.9702,396.0859,1711.1269,396.4179,1716.4722,398.2695,1714.6207,403.6147,1720.9702,396.0859" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="76" x="1589" y="420.0669">has interest</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1537.7921" y="512.2565">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1704.9852" y="413.1599">1</text><!--MD5=[0a16ef2ab1b2e986359a745c9f142068]
+link IndexedLoan to Spread--><path codeLine="130" d="M1807.068,663.134 C1817.017,665.1822 1827.3022,667.2192 1837,669 C1871.4698,675.3298 1910.704,681.4312 1939.8896,685.7573 " fill="none" id="IndexedLoan-to-Spread" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1944.8511,686.49,1936.532,681.2182,1939.9047,685.7596,1935.3633,689.1323,1944.8511,686.49" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="76" x="1838" y="665.0669">has interest</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1815.0725" y="677.8744">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1928.9877" y="698.936">1</text><!--MD5=[2fe7c8c9c7edc24eca88747fa314a9e3]
+link IndexedLoan to Euribor--><path codeLine="131" d="M1807.0698,640.94 C1847.7386,633.5775 1902.1565,623.726 1939.751,616.9201 " fill="none" id="IndexedLoan-to-Euribor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1944.7103,616.0223,1935.1417,613.6895,1939.7903,616.913,1936.5668,621.5616,1944.7103,616.0223" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="67" x="1842.5" y="617.0669">indexed to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1815.0745" y="652.6981">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1929.0884" y="630.6878">1</text><!--MD5=[30bab4b1559daea5c48546015ff99596]
+reverse link Liability to Loan--><path codeLine="135" d="M1359.1665,550.8429 C1388.3451,551.4856 1420.3552,552.1906 1446.7095,552.7711 " fill="none" id="Liability-backto-Loan" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1358.875,557.8382,1339.034,550.3994,1359.1833,543.8416,1358.875,557.8382" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7ecbdfb5e39d5dd182f852323deba648]
+reverse link Loan to IndexedLoan--><path codeLine="136" d="M1576.9309,582.9952 C1615.0272,597.8359 1660.6287,615.6003 1695.6692,629.2507 " fill="none" id="Loan-backto-IndexedLoan" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1574.1655,589.4303,1558.0705,575.648,1579.2474,576.3852,1574.1655,589.4303" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[22e1fb279d507b544da88c3d46deef04]
+@startuml
+left to right direction
+
+class Email {
+}
+
+enum Status {
+}
+
+class Rate {
+}
+
+class Value {
+}
+
+class Income {
+}
+
+class Expense {
+}
+
+class Term {
+}
+
+class Euribor {
+}
+
+class Spread {
+}
+
+interface Balanceable {
+  +double calculateBalance()
+  +int compare()
+}
+
+interface Rationable {
+  +double totalValue()
+  +double totalDebt()
+  +double netWorth()
+  +double debtEquityRatio()
+  +int compare()
+}
+
+class Platform {
+  -String description
+}
+
+class User {
+  -String name
+  -String hash
+}
+
+class UserRole {
+  -String role
+  -String description
+}
+
+class UserAccount {
+  -creationDate
+  -int simulationsLimit
+}
+
+class FinancialSimulation {
+  -String id
+  -String description
+}
+
+class Asset {
+  -String id
+  -String description
+}
+
+class Liability {
+  -String id
+  -String description
+}
+
+class Loan {
+  -double amount
+}
+
+class IndexedLoan {
+  -double euribor
+  -double spread
+}
+
+class CompoundService {
+}
+
+class CheckingAccount {
+  -String description
+}
+
+
+'interfaces connections'
+
+Balanceable <|- - Asset
+Balanceable <|- - Liability
+Balanceable <|- - CheckingAccount
+Balanceable <|- - FinancialSimulation
+
+Rationable <|- - Asset
+Rationable <|- - FinancialSimulation
+
+'class connetions'
+
+Platform "1" - -> "*" User : has registered
+Platform "1" - -> "*" UserAccount : supports
+
+User "*" - -> "1" UserRole : preforms
+User "1" - -> "1" Email : is characterized by
+
+UserAccount "1" - -> "1" User : has associated
+UserAccount "1" - -> "1" Status : is characterized by
+UserAccount "1" - -> "*" FinancialSimulation : holds 
+
+FinancialSimulation "1" - -> "*" Asset : has
+FinancialSimulation "1" - -> "1" CheckingAccount : has
+
+Asset "1" - -> "*" Liability : has 
+Asset "1" - -> "1" Value : is worth
+Asset "1" - -> "1" Income : provides
+Asset "1" - -> "1" Rate : returns
+
+Liability "1" - -> "1" Expense : has
+
+Loan "1" - -> "1" Amount : of
+Loan "1" - -> "1" Term : has
+Loan "1" - -> "1" Rate : has interest
+
+IndexedLoan "1" - -> "1" Spread : has interest
+IndexedLoan "1" - -> "1" Euribor : indexed to
+
+'inheritance relations'
+
+Liability <|- -  Loan
+Loan  <|- -  IndexedLoan
+@enduml
+
+@startuml
+left to right direction
+
+class Email {
+}
+
+enum Status {
+}
+
+class Rate {
+}
+
+class Value {
+}
+
+class Income {
+}
+
+class Expense {
+}
+
+class Term {
+}
+
+class Euribor {
+}
+
+class Spread {
+}
+
+interface Balanceable {
+  +double calculateBalance()
+  +int compare()
+}
+
+interface Rationable {
+  +double totalValue()
+  +double totalDebt()
+  +double netWorth()
+  +double debtEquityRatio()
+  +int compare()
+}
+
+class Platform {
+  -String description
+}
+
+class User {
+  -String name
+  -String hash
+}
+
+class UserRole {
+  -String role
+  -String description
+}
+
+class UserAccount {
+  -creationDate
+  -int simulationsLimit
+}
+
+class FinancialSimulation {
+  -String id
+  -String description
+}
+
+class Asset {
+  -String id
+  -String description
+}
+
+class Liability {
+  -String id
+  -String description
+}
+
+class Loan {
+  -double amount
+}
+
+class IndexedLoan {
+  -double euribor
+  -double spread
+}
+
+class CompoundService {
+}
+
+class CheckingAccount {
+  -String description
+}
+
+
+
+Balanceable <|- - Asset
+Balanceable <|- - Liability
+Balanceable <|- - CheckingAccount
+Balanceable <|- - FinancialSimulation
+
+Rationable <|- - Asset
+Rationable <|- - FinancialSimulation
+
+
+Platform "1" - -> "*" User : has registered
+Platform "1" - -> "*" UserAccount : supports
+
+User "*" - -> "1" UserRole : preforms
+User "1" - -> "1" Email : is characterized by
+
+UserAccount "1" - -> "1" User : has associated
+UserAccount "1" - -> "1" Status : is characterized by
+UserAccount "1" - -> "*" FinancialSimulation : holds 
+
+FinancialSimulation "1" - -> "*" Asset : has
+FinancialSimulation "1" - -> "1" CheckingAccount : has
+
+Asset "1" - -> "*" Liability : has 
+Asset "1" - -> "1" Value : is worth
+Asset "1" - -> "1" Income : provides
+Asset "1" - -> "1" Rate : returns
+
+Liability "1" - -> "1" Expense : has
+
+Loan "1" - -> "1" Amount : of
+Loan "1" - -> "1" Term : has
+Loan "1" - -> "1" Rate : has interest
+
+IndexedLoan "1" - -> "1" Spread : has interest
+IndexedLoan "1" - -> "1" Euribor : indexed to
+
+
+Liability <|- -  Loan
+Loan  <|- -  IndexedLoan
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 09:36:27 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
