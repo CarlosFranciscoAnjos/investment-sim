@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+<title>InvestmentSim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: sans-serif;
+        background-color: #c4c7c9;
+    }
+
+</style>
+<noscript>Please enable JavaScript!</noscript>
+<body>
+<h1>Investment Sim Server</h1>
+<div id="date"></div>
+<script>
+    let now = new Date()
+    let str = `<h3>${now.toUTCString()}</h3>`
+    console.log(str)
+    document.getElementById("date").innerHTML = str
+</script>
+<!--<img id="logo" src="logo.png" alt="logo"/>-->
+</body>
+</html>
