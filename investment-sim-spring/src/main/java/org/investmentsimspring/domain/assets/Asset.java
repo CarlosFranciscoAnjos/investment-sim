@@ -2,10 +2,11 @@ package org.investmentsimspring.domain.assets;
 
 import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Income;
-import org.investmentsimspring.domain.concepts.Rate;
 import org.investmentsimspring.domain.concepts.Value;
+import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
-import org.investmentsimspring.domain.plans.Plan;
+import org.investmentsimspring.domain.contracts.Item;
+import org.investmentsimspring.domain.contracts.Valuable;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -16,7 +17,9 @@ import java.util.Objects;
  * Represents an Asset
  */
 @Entity
-public class Asset implements Dtoable<AssetDto> {
+@Table(name = "assets")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Asset implements Item, Valuable, Dtoable<AssetDto> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,17 +31,17 @@ public class Asset implements Dtoable<AssetDto> {
     @Embedded
     protected Value value;
     @ManyToOne
-    protected Plan plan;
+    protected Container container;
 
     protected Asset() {
     }
 
-    protected Asset(long id, Description description, Income income, Value value, Plan plan) {
+    protected Asset(long id, Description description, Income income, Value value, Container container) {
         this.id = id;
         this.description = description;
         this.income = income;
         this.value = value;
-        this.plan = plan;
+        this.container = container;
     }
 
     public Asset(Description description, Income income, Value value) {
@@ -47,11 +50,11 @@ public class Asset implements Dtoable<AssetDto> {
         this.value = value;
     }
 
-    public Asset(Description description, Income income, Value value, Plan plan) {
+    public Asset(Description description, Income income, Value value, Container container) {
         this.description = description;
         this.income = income;
         this.value = value;
-        this.plan = plan;
+        this.container = container;
     }
 
     //region getters & setters
@@ -72,17 +75,30 @@ public class Asset implements Dtoable<AssetDto> {
         return value;
     }
 
-    public Plan getPlan() {
-        return plan;
+    public Container getContainer() {
+        return container;
     }
 
     //endregion
 
+    /**
+     * @return monthly rate (0-1 scale)
+     */
+    public double calculateMonthlyRate() {
+        return income.getValue() / value.getValue();
+    }
+
+    /**
+     * @return yearly rate (0-1 scale)
+     */
+    public double calculateYearlyRate() {
+        return calculateMonthlyRate() * 12;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Asset)) return false;
-        Asset asset = (Asset) o;
+        if (!(o instanceof Asset asset)) return false;
         return id == asset.id;
     }
 
@@ -98,6 +114,7 @@ public class Asset implements Dtoable<AssetDto> {
                 ", description=" + description +
                 ", income=" + income +
                 ", value=" + value +
+                ", container=" + container +
                 '}';
     }
 
@@ -105,11 +122,21 @@ public class Asset implements Dtoable<AssetDto> {
     public AssetDto toDto() {
         AssetDto dto = new AssetDto();
         dto.id = this.id;
+        dto.containerDto = this.container.toDto();
         dto.description = this.description.getValue();
         dto.income = this.income.getValue();
         dto.value = this.value.getValue();
-        dto.rate = new Rate(value, income).monthlyRate();
+        dto.rate = calculateYearlyRate();
         return dto;
     }
 
+    @Override
+    public double flow() {
+        return income.getValue();
+    }
+
+    @Override
+    public double value() {
+        return value.getValue();
+    }
 }

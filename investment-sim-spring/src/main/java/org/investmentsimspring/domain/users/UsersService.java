@@ -32,6 +32,12 @@ public class UsersService implements UserDetailsService {
         return user.toDto();
     }
 
+    public UserDto getUser(long id) {
+        User user = repo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(String.format("User with id %d not found", id)));;
+        return user.toDto();
+    }
+
     protected User getByEmailOrUsername(String input) {
         // find by username
         try {
@@ -58,4 +64,5 @@ public class UsersService implements UserDetailsService {
             throw new UsernameNotFoundException(String.format("User not found for input: %s", input));
         return user;
     }
+
 }

@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.assets;
+package org.investmentsimspring.domain.concepts;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;

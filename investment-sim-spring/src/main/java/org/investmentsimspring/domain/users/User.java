@@ -38,6 +38,8 @@ public class User implements Dtoable<UserDto>, UserDetails {
     private Hash hash;
     @Enumerated
     private UserRole role;
+    @Basic
+    private boolean isEnabled;
 
     protected User() {
     }
@@ -48,6 +50,7 @@ public class User implements Dtoable<UserDto>, UserDetails {
         this.email = email;
         this.hash = hash;
         this.role = role;
+        this.isEnabled = true;
     }
 
     /**
@@ -61,6 +64,7 @@ public class User implements Dtoable<UserDto>, UserDetails {
         this.email = email;
         this.hash = hash;
         this.role = role;
+        this.isEnabled = true;
     }
 
     //region getters & setters
@@ -84,6 +88,20 @@ public class User implements Dtoable<UserDto>, UserDetails {
         return role;
     }
     //endregion
+
+    /**
+     * Enables user login
+     */
+    protected void enable() {
+        this.isEnabled = true;
+    }
+
+    /**
+     * Disables user login
+     */
+    protected void disable() {
+        this.isEnabled = false;
+    }
 
     /**
      * @param email
@@ -187,7 +205,7 @@ public class User implements Dtoable<UserDto>, UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return isEnabled;
     }
     //endregion
 

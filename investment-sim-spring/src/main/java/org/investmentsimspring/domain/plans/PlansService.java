@@ -27,6 +27,17 @@ public class PlansService {
                 .collect(Collectors.toList());
     }
 
+    public PlanDto getPlan(long id) {
+        Plan plan = plansRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(String.format("Plan with id %d not found", id)));
+        return plan.toDto();
+    }
+
+    public List<PlanDto> getPlansByUserId(long userId) {
+        List<Plan> plans = plansRepo.findAllByUserId(userId);
+        return plans.stream().map(Plan::toDto).toList();
+    }
+
     public PlanDto createPlan(CreatePlanDto dto) {
         // fetch user
         User user = usersRepo.findById(dto.userId)
@@ -37,6 +48,13 @@ public class PlansService {
         builder.user(user);
         // save in repo
         Plan plan = plansRepo.save(builder.build());
+        return plan.toDto();
+    }
+
+    public PlanDto deletePlan(long id) {
+        Plan plan = plansRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(String.format("Plan with id %d not found", id)));
+        plansRepo.delete(plan);
         return plan.toDto();
     }
 }

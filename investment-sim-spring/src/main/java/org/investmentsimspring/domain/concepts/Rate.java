@@ -1,5 +1,7 @@
 package org.investmentsimspring.domain.concepts;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,7 +15,8 @@ public class Rate implements Serializable {
     // exception messages
     public static final String RATE_EXCEPTION = "Rate must be positive";
 
-    private final double rate; // yearly rate
+    @Access(AccessType.FIELD)
+    private final double rate; // monthly rate
 
     /**
      * Initializes a rate with value 0
@@ -23,7 +26,7 @@ public class Rate implements Serializable {
     }
 
     /**
-     * @param rate yearly rate in 0-1 scale
+     * @param rate monthly rate in 0-1 scale
      */
     public Rate(double rate) {
         if (rate < 0)
@@ -32,30 +35,7 @@ public class Rate implements Serializable {
     }
 
     /**
-     * @param value  total asset value
-     * @param income asset monthly income
-     */
-    public Rate(Value value, Income income) {
-        this.rate = (income.getValue() / value.getValue()) * 12;
-    }
-
-    /**
-     * @param spread
-     * @param euribor
-     */
-    public Rate(Spread spread, Euribor euribor) {
-        this.rate = spread.getValue() + euribor.getValue();
-    }
-
-    /**
      * @return monthly rate in 0-1 scale
-     */
-    public double monthlyRate() {
-        return rate / 12;
-    }
-
-    /**
-     * @return yearly rate in 0-1 scale
      */
     public double getValue() {
         return rate;

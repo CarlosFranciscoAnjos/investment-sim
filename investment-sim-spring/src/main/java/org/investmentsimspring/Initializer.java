@@ -6,6 +6,7 @@ import org.investmentsimspring.domain.users.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -34,7 +35,7 @@ public class Initializer implements CommandLineRunner {
         CreateUserDto dto = new CreateUserDto();
         dto.username = "admin";
         dto.email = "admin@investmentsim.org";
-        // dto.password = UUID.randomUUID().toString(); // generate password
+        // userDto.password = UUID.randomUUID().toString(); // generate password
         dto.password = "admin";
         dto.role = UserRole.ADMIN.name();
         usersService.createUser(dto);

@@ -12,9 +12,4 @@ public class InvestmentSimSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(InvestmentSimSpringApplication.class, args);
     }
-
-    @GetMapping("/api/status")
-    public String getStatus() {
-        return "tuto pom";
-    }
 }

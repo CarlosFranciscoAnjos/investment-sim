@@ -1,17 +1,26 @@
 package org.investmentsimspring.domain.concepts;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Represents spread (commission on loans)
  */
+@Embeddable
 public class Spread implements Serializable {
 
     // exception messages
     public static final String SPREAD_EXCEPTION = "Spread must be positive";
 
+    @Access(AccessType.FIELD)
     private final double spread;
+
+    protected Spread() {
+        this.spread = 0;
+    }
 
     /**
      * @param spread the spread value

@@ -1,6 +1,7 @@
 package org.investmentsimspring.domain.plans;
 
 import org.investmentsimspring.domain.concepts.Description;
+import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.users.User;
 
@@ -13,6 +14,7 @@ import java.util.Objects;
  * Represents a business Plan
  */
 @Entity
+@Table(name = "plans")
 public class Plan implements Dtoable<PlanDto> {
 
     @Id
@@ -22,19 +24,23 @@ public class Plan implements Dtoable<PlanDto> {
     private Description description;
     @ManyToOne
     private User user;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Container container;
 
     protected Plan() {
     }
 
-    protected Plan(long id, Description description, User user) {
+    protected Plan(long id, Description description, User user, Container container) {
         this.id = id;
         this.description = description;
         this.user = user;
+        this.container = container;
     }
 
     public Plan(Description description, User user) {
         this.description = description;
         this.user = user;
+        this.container = new Container(user);
     }
 
     //region getters & setters
@@ -48,6 +54,10 @@ public class Plan implements Dtoable<PlanDto> {
 
     public Description getDescription() {
         return description;
+    }
+
+    public Container getContainer() {
+        return container;
     }
     //endregion
 
@@ -70,6 +80,7 @@ public class Plan implements Dtoable<PlanDto> {
                 "id=" + id +
                 ", user=" + user +
                 ", description=" + description +
+                ", container=" + container +
                 '}';
     }
 
@@ -78,6 +89,7 @@ public class Plan implements Dtoable<PlanDto> {
         dto.id = this.id;
         dto.user = this.user.toDto();
         dto.description = this.description.getValue();
+        dto.containerDto = this.container.toDto();
         return dto;
     }
 }

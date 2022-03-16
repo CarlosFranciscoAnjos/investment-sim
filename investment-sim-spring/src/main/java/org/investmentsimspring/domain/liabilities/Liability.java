@@ -1,13 +1,17 @@
 package org.investmentsimspring.domain.liabilities;
 
+import org.investmentsimspring.domain.assets.Asset;
 import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Expense;
+import org.investmentsimspring.domain.contracts.Dtoable;
+import org.investmentsimspring.domain.contracts.Item;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class Liability {
+@Table(name = "liabilities")
+public class Liability implements Item, Dtoable<LiabilityDto> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +20,8 @@ public class Liability {
     protected Description description;
     @Embedded
     protected Expense expense;
+    @ManyToOne
+    protected Asset asset;
 
     protected Liability() {
     }
@@ -48,8 +54,7 @@ public class Liability {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Liability)) return false;
-        Liability liability = (Liability) o;
+        if (!(o instanceof Liability liability)) return false;
         return id == liability.id;
     }
 
@@ -65,5 +70,19 @@ public class Liability {
                 ", description=" + description +
                 ", expense=" + expense +
                 '}';
+    }
+
+    @Override
+    public LiabilityDto toDto() {
+        LiabilityDto dto = new LiabilityDto();
+        dto.id = this.id;
+        dto.description = this.description.getValue();
+        dto.expense = this.expense.getValue();
+        return dto;
+    }
+
+    @Override
+    public double flow() {
+        return -expense.getValue();
     }
 }

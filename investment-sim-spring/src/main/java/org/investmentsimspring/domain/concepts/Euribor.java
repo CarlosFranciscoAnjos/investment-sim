@@ -1,11 +1,13 @@
 package org.investmentsimspring.domain.concepts;
 
+import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Represents Euribor index (used in loans)
  */
+@Embeddable
 public class Euribor implements Serializable {
 
     // exception messages
