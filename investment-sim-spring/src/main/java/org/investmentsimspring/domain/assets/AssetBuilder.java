@@ -23,8 +23,8 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
-    public AssetBuilder container(Container containerId) {
-        this.container = containerId;
+    public AssetBuilder container(Container container) {
+        this.container = container;
         return this;
     }
 

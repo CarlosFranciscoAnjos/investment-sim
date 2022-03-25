@@ -26,15 +26,17 @@ public class Liability implements Item, Dtoable<LiabilityDto> {
     protected Liability() {
     }
 
-    protected Liability(long id, Description description, Expense expense) {
+    protected Liability(long id, Description description, Expense expense, Asset asset) {
         this.id = id;
         this.description = description;
         this.expense = expense;
+        this.asset = asset;
     }
 
-    public Liability(Description description, Expense expense) {
+    public Liability(Description description, Expense expense, Asset asset) {
         this.description = description;
         this.expense = expense;
+        this.asset = asset;
     }
 
     //region getters & setters
@@ -78,6 +80,7 @@ public class Liability implements Item, Dtoable<LiabilityDto> {
         dto.id = this.id;
         dto.description = this.description.getValue();
         dto.expense = this.expense.getValue();
+        dto.assetDto = this.asset.toDto();
         return dto;
     }
 

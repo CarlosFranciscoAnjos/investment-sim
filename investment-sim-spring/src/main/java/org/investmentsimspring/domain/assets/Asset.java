@@ -7,8 +7,10 @@ import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.contracts.Item;
 import org.investmentsimspring.domain.contracts.Valuable;
+import org.investmentsimspring.domain.liabilities.Liability;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -30,6 +32,8 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
     protected Income income;
     @Embedded
     protected Value value;
+//    @OneToMany(mappedBy = "asset")
+//    protected List<Liability> liabilities;
     @ManyToOne
     protected Container container;
 

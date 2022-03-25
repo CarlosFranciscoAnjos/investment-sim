@@ -8,6 +8,6 @@ public class LiabilityDto implements Dto {
     public long id;
     public String description;
     public double expense;
-    public AssetDto asset;
+    public AssetDto assetDto;
 
 }
