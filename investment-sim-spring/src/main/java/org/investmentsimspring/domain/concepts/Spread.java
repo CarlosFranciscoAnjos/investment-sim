@@ -23,7 +23,7 @@ public class Spread implements Serializable {
     }
 
     /**
-     * @param spread the spread value
+     * @param spread monthly in 0-1 scale
      */
     public Spread(double spread) {
         if (spread < 0)
@@ -32,7 +32,7 @@ public class Spread implements Serializable {
     }
 
     /**
-     * @return spread
+     * @return monthly in 0-1 scale
      */
     public double getValue() {
         return spread;

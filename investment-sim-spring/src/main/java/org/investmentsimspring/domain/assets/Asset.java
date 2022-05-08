@@ -48,12 +48,6 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
         this.container = container;
     }
 
-    public Asset(Description description, Income income, Value value) {
-        this.description = description;
-        this.income = income;
-        this.value = value;
-    }
-
     public Asset(Description description, Income income, Value value, Container container) {
         this.description = description;
         this.income = income;

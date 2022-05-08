@@ -11,6 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "liabilities")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Liability implements Item, Dtoable<LiabilityDto> {
 
     @Id
