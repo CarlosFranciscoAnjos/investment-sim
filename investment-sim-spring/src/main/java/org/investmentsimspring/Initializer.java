@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.time.LocalDateTime;
 
-@Component
+@Configuration
 public class Initializer implements CommandLineRunner {
 
     private final ApplicationContext context;
@@ -30,7 +31,7 @@ public class Initializer implements CommandLineRunner {
         configureAdmin(context.getBean(UsersService.class));
     }
 
-    private void configureAdmin(UsersService usersService) throws IOException {
+    protected void configureAdmin(UsersService usersService) throws IOException {
         // create default admin
         CreateUserDto dto = new CreateUserDto();
         dto.username = "admin";
