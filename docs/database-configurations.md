@@ -1,29 +1,27 @@
-# mySql Commands
+# Database Configurations
 
-### Launching Shell
 
-On local machine
+## MySQL
 
-    1. Add mysql to Environment Variables
-    mysql -u root -pqwerty
+### docker container
 
-On docker container
+    docker run --name mysql-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=verysecretpassword mysql
 
-    docker run --name mysql-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=qwerty mysql
     docker exec -it mysql-db bash
-    mysql -u root -pqwerty
+
+    mysql -u root -pverysecretpassword
 
 ### Users, Privileges & Database
 
-Select Users
+#### Select Users
 
     SELECT user, host FROM mysql.user;
 
-Create User
+#### Create User
 
     CREATE USER 'investment-sim'@'localhost' IDENTIFIED BY 'sim2021';
 
-Grant Privileges
+#### Grant Privileges
 
     GRANT ALL PRIVILEGES ON *.* TO 'investment-sim'@'localhost';
 
@@ -33,11 +31,15 @@ Grant Privileges
 
     SHOW GRANTS FOR 'investment-sim'@'localhost';
 
-Create Database
+#### Create Database
 
     CREATE DATABASE simdb;
     SHOW DATABASES;
     USE simdb;
 
 
-### Table & Queries
+## Postgres
+
+### docker container
+
+    docker run --name postgres-db-v1 -p 5432:5432 -e POSTGRES_PASSWORD=verysecretpassword -d postgres:13
