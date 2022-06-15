@@ -1,7 +1,7 @@
-package org.investmentsimspring.assets;
+package org.investmentsimspring.liabilities;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class AssetsUnitTest {
+public class LoansUnitTests {
 }

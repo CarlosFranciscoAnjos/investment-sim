@@ -6,11 +6,8 @@ import org.investmentsimspring.domain.users.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -33,25 +30,22 @@ public class Initializer implements CommandLineRunner {
 
     protected void configureAdmin(UsersService usersService) throws IOException {
         // create default admin
-        CreateUserDto dto = new CreateUserDto();
-        dto.username = "admin";
-        dto.email = "admin@investmentsim.org";
-        // userDto.password = UUID.randomUUID().toString(); // generate password
-        dto.password = "admin";
-        dto.role = UserRole.ADMIN.name();
+        CreateUserDto dto = new CreateUserDto() {
+            {
+                username = "admin";
+                email = "admin@investmentsim.org";
+                password = "admin";
+                // password = UUID.randomUUID().toString();
+                role = UserRole.ADMIN.name();
+            }
+        };
         usersService.createUser(dto);
-
         // log password
         System.out.println("password: " + dto.password);
-
         // write admin details to file
-        File file = new File("./output/admin-credentials.txt");
-        Writer writer = new FileWriter(file);
-        String string = LocalDateTime.now() + "\n" +
-                "username: " + dto.username + "\n" +
-                "email: " + dto.email + "\n" +
-                "password: " + dto.password + "\n";
-        writer.write(string);
+        Writer writer = new FileWriter("./output/admin-credentials.txt");
+        writer.write(String.format("%s\nusername: %s\nemail: %s\npassword: %s\n",
+                LocalDateTime.now(), dto.username, dto.email, dto.password));
         writer.close();
     }
 }
