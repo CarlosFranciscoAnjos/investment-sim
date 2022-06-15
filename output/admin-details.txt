@@ -1,4 +1,0 @@
-2022-05-09T21:37:26.226074800
-username: admin
-email: admin@investmentsim.org
-password: admin
