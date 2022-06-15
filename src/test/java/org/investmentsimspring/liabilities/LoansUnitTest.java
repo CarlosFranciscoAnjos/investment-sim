@@ -1,6 +1,7 @@
 package org.investmentsimspring.liabilities;
 
 import org.investmentsimspring.domain.liabilities.loans.Loan;
+import org.investmentsimspring.domain.liabilities.loans.LoansCalculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +19,7 @@ public class LoansUnitTest {
         double acceptableError = 0.05; // 5cent
 
         // act
-        double result = Loan.calculateMonthlyPayment(amount, rate, term);
+        double result = LoansCalculator.calculateMonthlyPayment(amount, rate, term);
 
         // assert
         assertEquals(expected, result, acceptableError);

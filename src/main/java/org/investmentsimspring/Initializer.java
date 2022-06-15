@@ -45,7 +45,7 @@ public class Initializer implements CommandLineRunner {
         System.out.println("password: " + dto.password);
 
         // write admin details to file
-        File file = new File("./output/admin-details.txt");
+        File file = new File("./output/admin-credentials.txt");
         Writer writer = new FileWriter(file);
         String string = LocalDateTime.now() + "\n" +
                 "username: " + dto.username + "\n" +
