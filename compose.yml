@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  investment-sim:
+    image: investment-sim:latest
+    container_name: investment-sim
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    networks:
+      - investment-sim-network
+    healthcheck:
+      test: curl -f http://localhost:8080/api/status || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 2
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - investment-sim-network
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/pgdata
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: investment-sim
+      PGDATA: /var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 1m
+      timeout: 10s
+      retries: 2
