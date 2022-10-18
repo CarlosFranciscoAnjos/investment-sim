@@ -1,5 +1,11 @@
+# alpine os w/ jdk 16
 FROM openjdk:16-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+
+# create output/ directory
 RUN mkdir output/
+
+# copy & rename .jar file
+COPY target/*.jar app.jar
+
+# application entrypoint
 ENTRYPOINT ["java","-jar","/app.jar"]
