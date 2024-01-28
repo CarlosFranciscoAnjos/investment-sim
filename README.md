@@ -27,7 +27,7 @@ admin:admin
 
 > CRUD OPERATIONS
     /users
-    /plans
+    /simulations
     /assets
     /liabilities
 ```

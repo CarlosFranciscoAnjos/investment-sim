@@ -22,13 +22,13 @@
 
 ![login-image](login.png)
 
-### UC3 - Create a Plan
+### UC3 - Create a Simulation
 
-    POST: {baseUrl}/api/plans
+    POST: {baseUrl}/api/simulations
 
     {
       "userId": {id},
-      "description": "plan-01"
+      "description": "simulation-01"
     }
 
 ### UC4 - Create a Simple Asset
@@ -36,7 +36,7 @@
     POST: {baseUrl}/api/assets
 
     {
-      "planId": {id},
+      "simulationId": {id},
       "description": "home-01",
       "income": 400.00,
       "value": 90000.00
@@ -44,4 +44,4 @@
 
 ### UC5 - Create a Simple Liability
 
-### UC6 - Get Plan Overview
+### UC6 - Get Simulation Overview

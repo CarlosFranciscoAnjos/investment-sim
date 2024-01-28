@@ -1,27 +1,27 @@
 package org.investmentsimspring.controller;
 
-import org.investmentsimspring.domain.plans.CreatePlanDto;
-import org.investmentsimspring.domain.plans.PlansService;
+import org.investmentsimspring.domain.simulations.CreateSimulationDto;
+import org.investmentsimspring.domain.simulations.SimulationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api/plans")
-public class PlansController {
+@RequestMapping(path = "/api/simulations")
+public class SimulationsController {
 
-    private final PlansService service;
+    private final SimulationsService service;
 
     @Autowired
-    public PlansController(PlansService service) {
+    public SimulationsController(SimulationsService service) {
         this.service = service;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllPlans() {
+    public ResponseEntity<?> getAllSimulations() {
         try {
-            return ResponseEntity.ok(service.getAllPlans());
+            return ResponseEntity.ok(service.getAllSimulations());
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -34,9 +34,9 @@ public class PlansController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getPlan(@PathVariable long id) {
+    public ResponseEntity<?> getSimulation(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.getPlan(id));
+            return ResponseEntity.ok(service.getSimulation(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -49,9 +49,9 @@ public class PlansController {
     }
 
     @GetMapping(value = "", params = "userId")
-    public ResponseEntity<?> getPlansByUserId(@RequestParam long userId) {
+    public ResponseEntity<?> getSimulationsByUserId(@RequestParam long userId) {
         try {
-            return ResponseEntity.ok(service.getPlansByUserId(userId));
+            return ResponseEntity.ok(service.getSimulationsByUserId(userId));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -64,9 +64,9 @@ public class PlansController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createPlan(@RequestBody CreatePlanDto dto) {
+    public ResponseEntity<?> createSimulation(@RequestBody CreateSimulationDto dto) {
         try {
-            return ResponseEntity.ok(service.createPlan(dto));
+            return ResponseEntity.ok(service.createSimulation(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -79,9 +79,9 @@ public class PlansController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deletePlan(@PathVariable long id) {
+    public ResponseEntity<?> deleteSimulation(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.deletePlan(id));
+            return ResponseEntity.ok(service.deleteSimulation(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)

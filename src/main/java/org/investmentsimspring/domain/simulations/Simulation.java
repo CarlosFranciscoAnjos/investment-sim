@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.plans;
+package org.investmentsimspring.domain.simulations;
 
 import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.containers.Container;
@@ -11,11 +11,11 @@ import java.util.Objects;
 /**
  * @author Carlos Anjos
  * <p>
- * Represents a business Plan
+ * Represents a business Simulation
  */
 @Entity
-@Table(name = "plans")
-public class Plan implements Dtoable<PlanDto> {
+@Table(name = "simulations")
+public class Simulation implements Dtoable<SimulationDto> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,17 +27,17 @@ public class Plan implements Dtoable<PlanDto> {
     @OneToOne(cascade = CascadeType.ALL)
     private Container container;
 
-    protected Plan() {
+    protected Simulation() {
     }
 
-    protected Plan(long id, Description description, User user, Container container) {
+    protected Simulation(long id, Description description, User user, Container container) {
         this.id = id;
         this.description = description;
         this.user = user;
         this.container = container;
     }
 
-    public Plan(Description description, User user) {
+    public Simulation(Description description, User user) {
         this.description = description;
         this.user = user;
         this.container = new Container(user);
@@ -65,8 +65,8 @@ public class Plan implements Dtoable<PlanDto> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Plan plan = (Plan) o;
-        return id == plan.id;
+        Simulation simulation = (Simulation) o;
+        return id == simulation.id;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Plan implements Dtoable<PlanDto> {
 
     @Override
     public String toString() {
-        return "Plan{" +
+        return "Simulation{" +
                 "id=" + id +
                 ", user=" + user +
                 ", description=" + description +
@@ -84,8 +84,8 @@ public class Plan implements Dtoable<PlanDto> {
                 '}';
     }
 
-    public PlanDto toDto() {
-        PlanDto dto = new PlanDto();
+    public SimulationDto toDto() {
+        SimulationDto dto = new SimulationDto();
         dto.id = this.id;
         dto.user = this.user.toDto();
         dto.description = this.description.getValue();

@@ -178,7 +178,7 @@
 			]
 		},
 		{
-			"name": "Plans",
+			"name": "Simulations",
 			"item": [
 				{
 					"name": "get status",
@@ -216,7 +216,7 @@
 					"response": []
 				},
 				{
-					"name": "post plan",
+					"name": "post simulation",
 					"event": [
 						{
 							"listen": "test",
@@ -235,7 +235,7 @@
 									"    let jsonData = pm.response.json();\r",
 									"    let id = pm.environment.get(\"userId\");\r",
 									"    pm.expect(jsonData.user.id).to.eql(id);\r",
-									"    pm.environment.set(\"planId\", jsonData.id);\r",
+									"    pm.environment.set(\"simulationId\", jsonData.id);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -247,7 +247,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\": {{userId}},\r\n    \"description\": \"{{username}}'s Plan\"\r\n}",
+							"raw": "{\r\n    \"userId\": {{userId}},\r\n    \"description\": \"{{username}}'s Simulation\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -255,20 +255,20 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/plans",
+							"raw": "{{url}}/api/simulations",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"plans"
+								"simulations"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "get plan by id",
+					"name": "get simulation by id",
 					"event": [
 						{
 							"listen": "test",
@@ -284,7 +284,7 @@
 									"\r",
 									"pm.test(\"Body is coherent\", function () {\r",
 									"    let jsonData = pm.response.json();\r",
-									"    let id = pm.environment.get(\"planId\");\r",
+									"    let id = pm.environment.get(\"simulationId\");\r",
 									"    pm.expect(jsonData.id).to.eql(id);\r",
 									"});"
 								],
@@ -296,19 +296,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/plans/:id",
+							"raw": "{{url}}/api/simulations/:id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"plans",
+								"simulations",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "{{planId}}"
+									"value": "{{simulationId}}"
 								}
 							]
 						}
@@ -316,7 +316,7 @@
 					"response": []
 				},
 				{
-					"name": "get plans by user id",
+					"name": "get simulations by user id",
 					"event": [
 						{
 							"listen": "test",
@@ -338,13 +338,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/plans/?userId={{userId}}",
+							"raw": "{{url}}/api/simulations/?userId={{userId}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"plans",
+								"simulations",
 								""
 							],
 							"query": [
@@ -358,7 +358,7 @@
 					"response": []
 				},
 				{
-					"name": "get plans",
+					"name": "get simulations",
 					"event": [
 						{
 							"listen": "test",
@@ -376,20 +376,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/plans",
+							"raw": "{{url}}/api/simulations",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"plans"
+								"simulations"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "delete plan",
+					"name": "delete simulation",
 					"event": [
 						{
 							"listen": "test",
@@ -405,7 +405,7 @@
 									"\r",
 									"pm.test(\"Body is coherent\", function () {\r",
 									"    let jsonData = pm.response.json();\r",
-									"    let id = pm.environment.get(\"planId\");\r",
+									"    let id = pm.environment.get(\"simulationId\");\r",
 									"    pm.expect(jsonData.id).to.eql(id);\r",
 									"});"
 								],
@@ -417,19 +417,19 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/plans/:id",
+							"raw": "{{url}}/api/simulations/:id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"plans",
+								"simulations",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "{{planId}}"
+									"value": "{{simulationId}}"
 								}
 							]
 						}
@@ -506,7 +506,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"description\": \"simple asset - {{planId}}\",\r\n    \"income\": 400,\r\n    \"value\": 80000\r\n}",
+							"raw": "{\r\n    \"description\": \"simple asset - {{simulationId}}\",\r\n    \"income\": 400,\r\n    \"value\": 80000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -514,7 +514,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/assets/?planId={{planId}}",
+							"raw": "{{url}}/api/assets/?simulationId={{simulationId}}",
 							"host": [
 								"{{url}}"
 							],
@@ -525,8 +525,8 @@
 							],
 							"query": [
 								{
-									"key": "planId",
-									"value": "{{planId}}"
+									"key": "simulationId",
+									"value": "{{simulationId}}"
 								}
 							]
 						}

@@ -1,10 +1,10 @@
-package org.investmentsimspring.domain.plans;
+package org.investmentsimspring.domain.simulations;
 
 import org.investmentsimspring.domain.containers.ContainerDto;
 import org.investmentsimspring.domain.contracts.Dto;
 import org.investmentsimspring.domain.users.UserDto;
 
-public class PlanDto implements Dto {
+public class SimulationDto implements Dto {
 
     public long id;
     public UserDto user;

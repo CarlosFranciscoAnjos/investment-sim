@@ -31,31 +31,30 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: investment-sim-v1
       PGDATA: /var/lib/postgresql/data/pgdata
-    # healthcheck:
-    #   test: pg_isready -U postgres
-    #   interval: 1m
-    #   timeout: 10s
-    #   retries: 2
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 1m
+      timeout: 10s
+      retries: 2
 
-  pgadmin:
-    image: dpage/pgadmin4:6.13
-    container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    ports:
-      - "5480:80"
-    networks:
-      - investment-sim-network
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    depends_on:
-      - postgres
+  # pgadmin:
+  #   image: dpage/pgadmin4:6.13
+  #   container_name: pgadmin
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@example.com
+  #     PGADMIN_DEFAULT_PASSWORD: admin
+  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
+  #   ports:
+  #     - "5480:80"
+  #   networks:
+  #     - investment-sim-network
+  #   volumes:
+  #     - pgadmin-data:/var/lib/pgadmin
+  #   depends_on:
+  #     - postgres
 
 networks:
   investment-sim-network:
-    driver: driver
 
 volumes:
   postgres-data:

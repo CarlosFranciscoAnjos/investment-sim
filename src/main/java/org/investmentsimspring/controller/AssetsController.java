@@ -63,10 +63,10 @@ public class AssetsController {
         }
     }
 
-    @PostMapping(params = "planId")
-    public ResponseEntity<?> createAssetInPlan(@RequestParam long planId, @RequestBody CreateAssetDto dto) {
+    @PostMapping(params = "simulationId")
+    public ResponseEntity<?> createAssetInSimulation(@RequestParam long simulationId, @RequestBody CreateAssetDto dto) {
         try {
-            return ResponseEntity.ok(service.createAssetInPlan(planId, dto));
+            return ResponseEntity.ok(service.createAssetInSimulation(simulationId, dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
