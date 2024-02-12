@@ -4,9 +4,16 @@
 
 ## Setup
 
-### docker compose
+### Build Investment-Sim
 ```
-docker compose build .
+mvn clean
+mvn -Dmaven.test.skip=true package
+java -jar target/*.jar
+```
+
+### Docker Compose
+```
+docker compose build
 docker compose up
 ```
 
