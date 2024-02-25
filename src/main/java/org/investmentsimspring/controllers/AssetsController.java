@@ -1,27 +1,27 @@
-package org.investmentsimspring.controller;
+package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.simulations.CreateSimulationDto;
-import org.investmentsimspring.domain.simulations.SimulationsService;
+import org.investmentsimspring.domain.assets.AssetsService;
+import org.investmentsimspring.domain.assets.CreateAssetDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api/simulations")
-public class SimulationsController {
+@RequestMapping(path = "/api/assets")
+public class AssetsController {
 
-    private final SimulationsService service;
+    private final AssetsService service;
 
     @Autowired
-    public SimulationsController(SimulationsService service) {
+    public AssetsController(AssetsService service) {
         this.service = service;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllSimulations() {
+    public ResponseEntity<?> getAllAssets() {
         try {
-            return ResponseEntity.ok(service.getAllSimulations());
+            return ResponseEntity.ok(service.getAllAssets());
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -34,9 +34,9 @@ public class SimulationsController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getSimulation(@PathVariable long id) {
+    public ResponseEntity<?> getAsset(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.getSimulation(id));
+            return ResponseEntity.ok(service.getAsset(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -48,10 +48,10 @@ public class SimulationsController {
         }
     }
 
-    @GetMapping(value = "", params = "userId")
-    public ResponseEntity<?> getSimulationsByUserId(@RequestParam long userId) {
+    @PostMapping()
+    public ResponseEntity<?> createAsset(@RequestBody CreateAssetDto dto) {
         try {
-            return ResponseEntity.ok(service.getSimulationsByUserId(userId));
+            return ResponseEntity.ok(service.createAsset(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -63,10 +63,10 @@ public class SimulationsController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<?> createSimulation(@RequestBody CreateSimulationDto dto) {
+    @PostMapping(params = "simulationId")
+    public ResponseEntity<?> createAssetInSimulation(@RequestParam long simulationId, @RequestBody CreateAssetDto dto) {
         try {
-            return ResponseEntity.ok(service.createSimulation(dto));
+            return ResponseEntity.ok(service.createAssetInSimulation(simulationId, dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -79,9 +79,9 @@ public class SimulationsController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteSimulation(@PathVariable long id) {
+    public ResponseEntity<?> deleteAsset(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.deleteSimulation(id));
+            return ResponseEntity.ok(service.deleteAsset(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)

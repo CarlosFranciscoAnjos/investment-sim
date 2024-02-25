@@ -1,4 +1,4 @@
-package org.investmentsimspring.controller;
+package org.investmentsimspring.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -24,5 +24,4 @@ public class SystemController {
     public String getStatus() {
         return "tuto pom";
     }
-
 }

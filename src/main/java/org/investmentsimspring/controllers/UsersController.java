@@ -1,27 +1,27 @@
-package org.investmentsimspring.controller;
+package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.liabilities.CreateLiabilityDto;
-import org.investmentsimspring.domain.liabilities.LiabilitiesService;
+import org.investmentsimspring.domain.users.CreateUserDto;
+import org.investmentsimspring.domain.users.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api/liabilities")
-public class LiabilitiesController {
+@RequestMapping(path = "/api/users")
+public class UsersController {
 
-    private final LiabilitiesService service;
+    private final UsersService service;
 
     @Autowired
-    public LiabilitiesController(LiabilitiesService service) {
+    public UsersController(UsersService service) {
         this.service = service;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllLiabilities() {
+    public ResponseEntity<?> getAllUsers() {
         try {
-            return ResponseEntity.ok(service.getAllLiabilities());
+            return ResponseEntity.ok(service.getAllUsers());
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -34,9 +34,9 @@ public class LiabilitiesController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getLiability(@PathVariable long id) {
+    public ResponseEntity<?> getUser(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.getLiability(id));
+            return ResponseEntity.ok(service.getUser(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -48,10 +48,10 @@ public class LiabilitiesController {
         }
     }
 
-    @PostMapping()
-    public ResponseEntity<?> createLiability(@RequestBody CreateLiabilityDto dto) {
+    @PostMapping
+    public ResponseEntity<?> createUser(@RequestBody CreateUserDto dto) {
         try {
-            return ResponseEntity.ok(service.createLiability(dto));
+            return ResponseEntity.ok(service.createUser(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -63,18 +63,4 @@ public class LiabilitiesController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteLiability(@PathVariable long id) {
-        try {
-            return ResponseEntity.ok(service.deleteLiability(id));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity
-                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(e.getMessage());
-        }
-    }
 }

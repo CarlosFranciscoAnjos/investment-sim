@@ -1,27 +1,27 @@
-package org.investmentsimspring.controller;
+package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.assets.AssetsService;
-import org.investmentsimspring.domain.assets.CreateAssetDto;
+import org.investmentsimspring.domain.liabilities.CreateLiabilityDto;
+import org.investmentsimspring.domain.liabilities.LiabilitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api/assets")
-public class AssetsController {
+@RequestMapping(path = "/api/liabilities")
+public class LiabilitiesController {
 
-    private final AssetsService service;
+    private final LiabilitiesService service;
 
     @Autowired
-    public AssetsController(AssetsService service) {
+    public LiabilitiesController(LiabilitiesService service) {
         this.service = service;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllAssets() {
+    public ResponseEntity<?> getAllLiabilities() {
         try {
-            return ResponseEntity.ok(service.getAllAssets());
+            return ResponseEntity.ok(service.getAllLiabilities());
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -34,9 +34,9 @@ public class AssetsController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getAsset(@PathVariable long id) {
+    public ResponseEntity<?> getLiability(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.getAsset(id));
+            return ResponseEntity.ok(service.getLiability(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -49,24 +49,9 @@ public class AssetsController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> createAsset(@RequestBody CreateAssetDto dto) {
+    public ResponseEntity<?> createLiability(@RequestBody CreateLiabilityDto dto) {
         try {
-            return ResponseEntity.ok(service.createAsset(dto));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity
-                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(e.getMessage());
-        }
-    }
-
-    @PostMapping(params = "simulationId")
-    public ResponseEntity<?> createAssetInSimulation(@RequestParam long simulationId, @RequestBody CreateAssetDto dto) {
-        try {
-            return ResponseEntity.ok(service.createAssetInSimulation(simulationId, dto));
+            return ResponseEntity.ok(service.createLiability(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -79,9 +64,9 @@ public class AssetsController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteAsset(@PathVariable long id) {
+    public ResponseEntity<?> deleteLiability(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(service.deleteAsset(id));
+            return ResponseEntity.ok(service.deleteLiability(id));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -92,5 +77,4 @@ public class AssetsController {
                     .body(e.getMessage());
         }
     }
-
 }
