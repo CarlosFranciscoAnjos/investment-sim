@@ -8,7 +8,7 @@ RUN mvn dependency:resolve
 # copy source/
 COPY src/ /build/src/
 # build the app with maven
-RUN mvn -Dmaven.test.skip=true package
+RUN mvn -D maven.test.skip=true package
 
 # alpine os w/ jdk 16
 FROM openjdk:16-jdk-alpine
