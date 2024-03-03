@@ -1,9 +1,8 @@
 package org.investmentsimspring.domain.simulations;
 
+import org.investmentsimspring.database.SimulationsRepository;
+import org.investmentsimspring.database.UsersRepository;
 import org.investmentsimspring.domain.users.User;
-import org.investmentsimspring.infrastructure.SimulationsRepository;
-import org.investmentsimspring.infrastructure.UsersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +14,6 @@ public class SimulationsService {
     private final SimulationsRepository simulationsRepo;
     private final UsersRepository usersRepo;
 
-    @Autowired
     public SimulationsService(SimulationsRepository simulationsRepo, UsersRepository usersRepo) {
         this.simulationsRepo = simulationsRepo;
         this.usersRepo = usersRepo;

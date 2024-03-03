@@ -1,8 +1,8 @@
 package org.investmentsimspring.domain.users;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Embeddable;
+import jakarta.persistence.Access;
+import jakarta.persistence.AccessType;
+import jakarta.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
@@ -18,20 +18,20 @@ public class Username {
     public static final String REGEX = "^[a-zA-Z0-9_-]+$";
 
     @Access(AccessType.FIELD)
-    private final String userName;
+    private final String username;
 
     protected Username() {
-        this.userName = "";
+        this.username = "";
     }
 
     public Username(String userName) {
         if (userName == null || userName.length() < MIN_LENGTH || !userName.matches(REGEX))
             throw new IllegalArgumentException(NAME_EXCEPTION);
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getValue() {
-        return userName;
+        return username;
     }
 
     @Override
@@ -39,17 +39,17 @@ public class Username {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Username username = (Username) o;
-        return this.userName.equalsIgnoreCase(username.userName);
+        return this.username.equalsIgnoreCase(username.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName);
+        return Objects.hash(username);
     }
 
     @Override
     public String toString() {
-        return userName;
+        return username;
     }
 
 }

@@ -1,11 +1,9 @@
 package org.investmentsimspring.domain.users;
 
-import org.investmentsimspring.infrastructure.UsersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.investmentsimspring.database.UsersRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,12 +13,9 @@ import java.util.stream.Collectors;
 public class UsersService implements UserDetailsService {
 
     private final UsersRepository repo;
-    private final PasswordEncoder passwordEncoder;
 
-    @Autowired
-    public UsersService(UsersRepository repo, PasswordEncoder passwordEncoder) {
+    public UsersService(UsersRepository repo) {
         this.repo = repo;
-        this.passwordEncoder = passwordEncoder;
     }
 
     public List<UserDto> getAllUsers() {

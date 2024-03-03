@@ -6,7 +6,7 @@ import org.investmentsimspring.domain.concepts.Expense;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.contracts.Item;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity

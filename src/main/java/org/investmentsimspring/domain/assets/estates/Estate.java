@@ -7,10 +7,9 @@ import org.investmentsimspring.domain.concepts.Income;
 import org.investmentsimspring.domain.concepts.Value;
 import org.investmentsimspring.domain.containers.Container;
 
-import javax.annotation.Nullable;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Enumerated;
 
 /**
  * @author Carlos Anjos

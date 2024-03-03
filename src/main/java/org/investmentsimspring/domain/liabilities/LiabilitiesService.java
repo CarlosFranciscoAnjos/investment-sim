@@ -1,9 +1,8 @@
 package org.investmentsimspring.domain.liabilities;
 
+import org.investmentsimspring.database.AssetsRepository;
+import org.investmentsimspring.database.LiabilitiesRepository;
 import org.investmentsimspring.domain.assets.Asset;
-import org.investmentsimspring.infrastructure.AssetsRepository;
-import org.investmentsimspring.infrastructure.LiabilitiesRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +13,6 @@ public class LiabilitiesService {
     private final LiabilitiesRepository liabilitiesRepo;
     private final AssetsRepository assetsRepo;
 
-    @Autowired
     public LiabilitiesService(LiabilitiesRepository liabilitiesRepo, AssetsRepository assetsRepo) {
         this.liabilitiesRepo = liabilitiesRepo;
         this.assetsRepo = assetsRepo;

@@ -2,7 +2,6 @@ package org.investmentsimspring.controllers;
 
 import org.investmentsimspring.domain.liabilities.CreateLiabilityDto;
 import org.investmentsimspring.domain.liabilities.LiabilitiesService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ public class LiabilitiesController {
 
     private final LiabilitiesService service;
 
-    @Autowired
     public LiabilitiesController(LiabilitiesService service) {
         this.service = service;
     }

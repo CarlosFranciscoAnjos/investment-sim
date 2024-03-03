@@ -5,7 +5,7 @@ import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.users.User;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 /**

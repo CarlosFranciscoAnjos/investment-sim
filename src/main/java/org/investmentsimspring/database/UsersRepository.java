@@ -1,4 +1,4 @@
-package org.investmentsimspring.infrastructure;
+package org.investmentsimspring.database;
 
 import org.investmentsimspring.domain.users.Email;
 import org.investmentsimspring.domain.users.User;

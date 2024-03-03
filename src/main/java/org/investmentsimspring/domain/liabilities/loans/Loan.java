@@ -6,7 +6,7 @@ import org.investmentsimspring.domain.concepts.Value;
 import org.investmentsimspring.domain.contracts.Valuable;
 import org.investmentsimspring.domain.liabilities.Liability;
 
-import javax.persistence.Embedded;
+import jakarta.persistence.Embedded;
 
 public class Loan extends Liability implements Valuable {
 

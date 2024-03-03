@@ -1,4 +1,4 @@
-package org.investmentsimspring.infrastructure;
+package org.investmentsimspring.database;
 
 import org.investmentsimspring.domain.simulations.Simulation;
 import org.springframework.data.jpa.repository.JpaRepository;

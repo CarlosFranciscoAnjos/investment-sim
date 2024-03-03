@@ -3,7 +3,7 @@ package org.investmentsimspring.domain.containers;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.users.User;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author Carlos Anjos

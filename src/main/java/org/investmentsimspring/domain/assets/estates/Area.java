@@ -1,8 +1,8 @@
 package org.investmentsimspring.domain.assets.estates;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Embeddable;
+import jakarta.persistence.Access;
+import jakarta.persistence.AccessType;
+import jakarta.persistence.Embeddable;
 import java.util.Objects;
 
 /**

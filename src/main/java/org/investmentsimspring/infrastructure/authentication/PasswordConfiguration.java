@@ -1,4 +1,4 @@
-package org.investmentsimspring.infrastructure.security;
+package org.investmentsimspring.infrastructure.authentication;
 
 import org.investmentsimspring.domain.security.HashHelper;
 import org.springframework.context.annotation.Bean;

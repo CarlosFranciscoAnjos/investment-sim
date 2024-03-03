@@ -7,10 +7,7 @@ import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.contracts.Item;
 import org.investmentsimspring.domain.contracts.Valuable;
-import org.investmentsimspring.domain.liabilities.Liability;
-
-import javax.persistence.*;
-import java.util.List;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 /**

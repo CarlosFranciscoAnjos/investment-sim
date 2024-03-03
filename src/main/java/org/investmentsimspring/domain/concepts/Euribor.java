@@ -1,6 +1,6 @@
 package org.investmentsimspring.domain.concepts;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 

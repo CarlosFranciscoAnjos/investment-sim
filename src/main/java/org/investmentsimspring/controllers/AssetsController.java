@@ -2,7 +2,6 @@ package org.investmentsimspring.controllers;
 
 import org.investmentsimspring.domain.assets.AssetsService;
 import org.investmentsimspring.domain.assets.CreateAssetDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ public class AssetsController {
 
     private final AssetsService service;
 
-    @Autowired
     public AssetsController(AssetsService service) {
         this.service = service;
     }

@@ -1,7 +1,7 @@
 package org.investmentsimspring.domain.concepts;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
+import jakarta.persistence.Access;
+import jakarta.persistence.AccessType;
 import java.io.Serializable;
 import java.util.Objects;
 

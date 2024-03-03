@@ -2,7 +2,6 @@ package org.investmentsimspring.controllers;
 
 import org.investmentsimspring.domain.simulations.CreateSimulationDto;
 import org.investmentsimspring.domain.simulations.SimulationsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ public class SimulationsController {
 
     private final SimulationsService service;
 
-    @Autowired
     public SimulationsController(SimulationsService service) {
         this.service = service;
     }

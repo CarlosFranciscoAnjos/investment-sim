@@ -2,7 +2,6 @@ package org.investmentsimspring.controllers;
 
 import org.investmentsimspring.domain.users.CreateUserDto;
 import org.investmentsimspring.domain.users.UsersService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ public class UsersController {
 
     private final UsersService service;
 
-    @Autowired
     public UsersController(UsersService service) {
         this.service = service;
     }
