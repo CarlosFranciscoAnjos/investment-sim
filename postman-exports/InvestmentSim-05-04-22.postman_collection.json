@@ -1,0 +1,1212 @@
+{
+	"info": {
+		"_postman_id": "0df0bd50-fd55-4588-aa51-90426e28a7d5",
+		"name": "InvestmentSim",
+		"description": "@CarlosFranciscoAnjos  \ncarlos.francisco.anjos@outlook.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18332854"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "get status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Tuto Pom\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.username).to.eql(\"tom\");\r",
+									"    pm.collectionVariables.set(\"user_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"tom\",\r\n    \"email\": \"tom@email.com\",\r\n    \"password\": \"qwerty\",\r\n    \"role\": \"CLIENT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"user_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{user_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Simulations",
+			"item": [
+				{
+					"name": "create simulation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"user_id\");\r",
+									"    pm.expect(jsonData.user.id).to.eql(id);\r",
+									"    pm.collectionVariables.set(\"simulation_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": {{user_id}},\r\n    \"description\": \"user {{user_id}} simulation\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/simulations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get simulation by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"simulation_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/simulations/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{simulation_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get simulations by user id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/simulations/?userId={{user_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "{{user_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all simulations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/simulations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete simulation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"simulation_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/simulations/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{simulation_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "create asset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"asset_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"simple asset for simulation: {{simulation_id}}\",\r\n    \"income\": 400,\r\n    \"value\": 80000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assets/?simulationId={{simulation_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								""
+							],
+							"query": [
+								{
+									"key": "simulationId",
+									"value": "{{simulation_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get asset by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"asset_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/assets/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all assets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/assets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete asset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"asset_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/assets/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Liabilities",
+			"item": [
+				{
+					"name": "create liability",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"liability_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assetId\": {{asset_id}},\r\n    \"description\": \"simple liability for asset {{asset_id}}\",\r\n    \"expense\": 75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/liabilities/?assetId={{asset_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								""
+							],
+							"query": [
+								{
+									"key": "assetId",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get liability by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"liability_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/liabilities/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{liability_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all liabilities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/liabilities",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete liability",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"liability_id\");\r",
+									"    pm.expect(jsonData.id).to.eql(id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/liabilities/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{liability_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calculations",
+			"item": []
+		},
+		{
+			"name": "Flow 1",
+			"item": [
+				{
+					"name": "create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.username).to.eql(\"tom\");\r",
+									"    pm.collectionVariables.set(\"user_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"flow1\",\r\n    \"email\": \"flow1@email.com\",\r\n    \"password\": \"qwerty\",\r\n    \"role\": \"CLIENT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create simulation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    let id = pm.collectionVariables.get(\"user_id\");\r",
+									"    pm.expect(jsonData.user.id).to.eql(id);\r",
+									"    pm.collectionVariables.set(\"simulation_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": {{user_id}},\r\n    \"description\": \"130_000$ house including purchase costs, house loan & yearly upkeep\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/simulations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"simulations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create asset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"asset_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/*\r\nCanelas, VNG, 100m2, T2+1, 2 bathrooms, 4º floor\r\nBuy for 130_000$\r\nDebt 80% (104_000$)\r\nExpenses 5_000$ (on purchase)\r\nYearly costs 1_000$\r\nRent 650$ (before tax ~23%)\r\n*/\r\n{\r\n    \"description\": \"House T2+1 100m2 in Canelas, VNG\",\r\n    \"income\": 0,\r\n    \"value\": 130000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assets/?simulationId={{simulation_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								""
+							],
+							"query": [
+								{
+									"key": "simulationId",
+									"value": "{{simulation_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create liability (purchase costs)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"liability_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assetId\": {{asset_id}},\r\n    \"description\": \"Purchase costs: taxes\",\r\n    \"expense\" : 5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/liabilities/?assetId={{asset_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								""
+							],
+							"query": [
+								{
+									"key": "assetId",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create liability (house loan)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"liability_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assetId\": {{asset_id}},\r\n    \"description\": \"House loan\",\r\n    \"value\": 104000,\r\n    \"rate\" : 3.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/liabilities/?assetId={{asset_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								""
+							],
+							"query": [
+								{
+									"key": "assetId",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create liability (yearly costs)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is not empty\", function () {\r",
+									"    pm.response.to.have.body();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is coherent\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"liability_id\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"m.variables.set(\"run_tests\", false);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assetId\": {{asset_id}},\r\n    \"description\": \"Yearly costs for house: taxes & upkeep\",\r\n    \"expense\" : 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/liabilities/?assetId={{asset_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"liabilities",
+								""
+							],
+							"query": [
+								{
+									"key": "assetId",
+									"value": "{{asset_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This requests test the following flow:\n\n1. Create user\n2. Create simulation (for buying a property)\n3. Add an asset representing the property\n4. Add a loan liability for 80% of the property value\n5. Request general calculations"
+		},
+		{
+			"name": "get api-docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v2/api-docs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{auth_password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{auth_user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"let run_tests = pm.variables.get(\"run_tests\");",
+					"if (run_tests) {",
+					"",
+					"    pm.test(\"Status code is 200\", function () {",
+					"        pm.response.to.have.status(200);",
+					"    });",
+					"",
+					"    pm.test(\"Body is not empty\", function () {",
+					"        pm.response.to.have.body();",
+					"    });",
+					"",
+					"    pm.test(\"Response time is less than 500ms\", function () {",
+					"        pm.expect(pm.response.responseTime).to.be.below(500);",
+					"    });",
+					"}",
+					"pm.variables.set(\"run_tests\", true);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user_id",
+			"value": ""
+		}
+	]
+}
