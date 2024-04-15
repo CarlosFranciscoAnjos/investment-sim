@@ -47,14 +47,14 @@ docker compose down -v
 
 ### Postman Overview
 
-![postman-capture](docs/images/postman-capture.PNG)
+<img alt="postman-capture" src="docs/images/postman-capture.png" width="1000"/>
 
 ## Application Design
 
 ### C2 Diagram
 
-![c2-diagram](docs/diagrams/c2-diagram.svg)
+<img alt="c2-diagram" src="docs/diagrams/c2-diagram.svg"  width="1000"/>
 
 ### CI/CD Diagram
 
-![cicd-diagram](docs/diagrams/cicd-diagram.svg)
+<img alt="cicd-diagram" src="docs/diagrams/cicd-diagram.svg"  width="1000"/>
