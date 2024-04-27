@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   investment-sim:
     image: investment-sim:latest

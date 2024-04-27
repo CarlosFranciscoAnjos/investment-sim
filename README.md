@@ -53,8 +53,8 @@ docker compose down -v
 
 ### C2 Diagram
 
-<img alt="c2-diagram" src="docs/diagrams/c2-diagram.svg"  width="1000"/>
+<img alt="c2-diagram" src="docs/diagrams/c2-diagram.png"  width="1000"/>
 
 ### CI/CD Diagram
 
-<img alt="cicd-diagram" src="docs/diagrams/cicd-diagram.svg"  width="1000"/>
+<img alt="cicd-diagram" src="docs/diagrams/infrastructure-diagram.png"  width="1000"/>
