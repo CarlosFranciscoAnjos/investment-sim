@@ -15,11 +15,16 @@ java -jar target/*.jar
 ### Docker Compose
 
 ```bash
-docker compose build
-docker compose up
+# create
+docker compose -p investment-sim build
+docker compose -p investment-sim up -V -d
 
-docker compose stop
-docker compose down -v
+# delete
+docker compose -p investment-sim stop
+docker compose -p investment-sim down -v
+
+# status
+docker compose -p investment-sim logs -f
 ```
 
 ## API Specification
@@ -43,11 +48,13 @@ docker compose down -v
 
 ### Swagger Specification
 
-![swagger](docs/swagger.xml)
+_[swagger.json](docs/swagger.json)_
+
+<img alt="swagger-editor" src="docs/images/swagger-editor.png" width="1000"/>
 
 ### Postman Overview
 
-<img alt="postman-capture" src="docs/images/postman-capture.png" width="1000"/>
+<img alt="postman-capture" src="docs/images/postman-overview.png" width="1000"/>
 
 ## Application Design
 
@@ -55,6 +62,6 @@ docker compose down -v
 
 <img alt="c2-diagram" src="docs/diagrams/c2-diagram.png"  width="1000"/>
 
-### CI/CD Diagram
+### Infrastructure Diagram
 
 <img alt="cicd-diagram" src="docs/diagrams/infrastructure-diagram.png"  width="1000"/>
