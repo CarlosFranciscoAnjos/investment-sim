@@ -49,7 +49,9 @@ public class LiabilitiesController {
     @PostMapping()
     public ResponseEntity<?> createLiability(@RequestBody CreateLiabilityDto dto) {
         try {
-            return ResponseEntity.ok(service.createLiability(dto));
+            return ResponseEntity
+                    .status(HttpStatus.CREATED)
+                    .body(service.createLiability(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)

@@ -64,7 +64,9 @@ public class SimulationsController {
     @PostMapping
     public ResponseEntity<?> createSimulation(@RequestBody CreateSimulationDto dto) {
         try {
-            return ResponseEntity.ok(service.createSimulation(dto));
+            return ResponseEntity
+                    .status(HttpStatus.CREATED)
+                    .body(service.createSimulation(dto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
