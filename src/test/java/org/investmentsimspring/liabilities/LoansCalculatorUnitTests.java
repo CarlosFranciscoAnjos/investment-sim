@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Expected result calculated using
+ * https://www.calculator.net/amortization-calculator.html
+ */
 public class LoansCalculatorUnitTests {
 
     @Test

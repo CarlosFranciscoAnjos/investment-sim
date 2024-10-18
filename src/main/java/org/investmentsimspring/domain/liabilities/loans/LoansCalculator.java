@@ -1,9 +1,12 @@
 package org.investmentsimspring.domain.liabilities.loans;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * @author Carlos Anjos
- * <p>
- * Utility class for loan calculation
+ *         <p>
+ *         Utility class for loan calculation
  */
 public class LoansCalculator {
 
@@ -37,7 +40,9 @@ public class LoansCalculator {
      * @return amortization made in given month
      */
     public static double calculateAmortization(double principal, double rate, int term, int current) {
-        return 0;
+        double interest = calculateInterest(principal, rate, term, current);
+        double monthlyPayment = calculateMonthlyPayment(principal, rate, term);
+        return monthlyPayment - interest;
     }
 
     /**
@@ -58,7 +63,34 @@ public class LoansCalculator {
      * @return interest paid in given month
      */
     public static double calculateInterest(double principal, double rate, int term, int current) {
-        return 0;
+        // double monthlyPayment = calculateMonthlyPayment(principal, rate, term);
+        // double i = rate / 12;
+        // double remainingBalance = principal * Math.pow(1 + i, current)
+        // - (monthlyPayment * ((Math.pow(1 + i, current) - 1) / i));
+        // return remainingBalance * i;
+
+        // Convert the double values to BigDecimal for precise calculations
+        BigDecimal principalBD = BigDecimal.valueOf(principal);
+        BigDecimal rateBD = BigDecimal.valueOf(rate);
+
+        // Calculate the monthly interest rate with high precision
+        BigDecimal monthlyRate = rateBD.divide(BigDecimal.valueOf(12), 10, RoundingMode.HALF_UP);
+
+        // Calculate the monthly payment using BigDecimal
+        BigDecimal monthlyPayment = BigDecimal.valueOf(calculateMonthlyPayment(principal, rate, term));
+
+        // Calculate the remaining balance before the current month using BigDecimal
+        BigDecimal onePlusRatePowerCurrentMinus1 = monthlyRate.add(BigDecimal.ONE).pow(current - 1);
+        BigDecimal balanceBefore = principalBD.multiply(onePlusRatePowerCurrentMinus1)
+                .subtract(monthlyPayment.multiply(onePlusRatePowerCurrentMinus1.subtract(BigDecimal.ONE))
+                        .divide(monthlyRate, 10, RoundingMode.HALF_UP));
+
+        // Interest for the current month is calculated as the remaining balance before
+        // the current month times the monthly interest rate
+        BigDecimal interestForCurrentMonth = balanceBefore.multiply(monthlyRate);
+
+        // Convert the BigDecimal result back to double
+        return interestForCurrentMonth.doubleValue();
     }
 
     /**
