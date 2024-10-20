@@ -1,12 +1,12 @@
-package org.investmentsimspring.domain.assets;
+package org.investmentsimspring.models.assets;
 
-import org.investmentsimspring.domain.containers.ContainerDto;
 import org.investmentsimspring.domain.contracts.Dto;
+import org.investmentsimspring.models.simulations.SimulationDto;
 
 public class AssetDto implements Dto {
 
     public long id;
-    public ContainerDto containerDto;
+    public SimulationDto simulationDto;
     public String description;
     public double income;
     public double value;

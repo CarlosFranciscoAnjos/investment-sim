@@ -3,10 +3,12 @@ package org.investmentsimspring.domain.assets;
 import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Income;
 import org.investmentsimspring.domain.concepts.Value;
-import org.investmentsimspring.domain.containers.Container;
+import org.investmentsimspring.domain.simulations.Simulation;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.contracts.Item;
 import org.investmentsimspring.domain.contracts.Valuable;
+import org.investmentsimspring.models.assets.AssetDto;
+
 import jakarta.persistence.*;
 import java.util.Objects;
 
@@ -32,24 +34,24 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
 //    @OneToMany(mappedBy = "asset")
 //    protected List<Liability> liabilities;
     @ManyToOne
-    protected Container container;
+    protected Simulation simulation;
 
     protected Asset() {
     }
 
-    protected Asset(long id, Description description, Income income, Value value, Container container) {
+    protected Asset(long id, Description description, Income income, Value value, Simulation simulation) {
         this.id = id;
         this.description = description;
         this.income = income;
         this.value = value;
-        this.container = container;
+        this.simulation = simulation;
     }
 
-    public Asset(Description description, Income income, Value value, Container container) {
+    public Asset(Description description, Income income, Value value, Simulation simulation) {
         this.description = description;
         this.income = income;
         this.value = value;
-        this.container = container;
+        this.simulation = simulation;
     }
 
     //region getters & setters
@@ -70,8 +72,8 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
         return value;
     }
 
-    public Container getContainer() {
-        return container;
+    public Simulation getSimulation() {
+        return simulation;
     }
 
     //endregion
@@ -109,7 +111,7 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
                 ", description=" + description +
                 ", income=" + income +
                 ", value=" + value +
-                ", container=" + container +
+                ", container=" + simulation +
                 '}';
     }
 
@@ -117,7 +119,7 @@ public class Asset implements Item, Valuable, Dtoable<AssetDto> {
     public AssetDto toDto() {
         AssetDto dto = new AssetDto();
         dto.id = this.id;
-        dto.containerDto = this.container.toDto();
+        dto.simulationDto = this.simulation.toDto();
         dto.description = this.description.getValue();
         dto.income = this.income.getValue();
         dto.value = this.value.getValue();

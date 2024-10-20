@@ -3,6 +3,8 @@ package org.investmentsimspring.domain.users;
 import org.investmentsimspring.domain.contracts.Builder;
 import org.investmentsimspring.domain.security.Hash;
 import org.investmentsimspring.domain.security.UserRole;
+import org.investmentsimspring.models.users.CreateUserDto;
+import org.investmentsimspring.models.users.UserDto;
 
 public class UserBuilder implements Builder<User> {
 

@@ -1,8 +1,12 @@
-package org.investmentsimspring.domain.simulations;
+package org.investmentsimspring.services;
 
 import org.investmentsimspring.database.SimulationsRepository;
 import org.investmentsimspring.database.UsersRepository;
+import org.investmentsimspring.domain.simulations.Simulation;
+import org.investmentsimspring.domain.simulations.SimulationBuilder;
 import org.investmentsimspring.domain.users.User;
+import org.investmentsimspring.models.simulations.CreateSimulationDto;
+import org.investmentsimspring.models.simulations.SimulationDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

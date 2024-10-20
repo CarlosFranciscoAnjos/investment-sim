@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.liabilities.loans;
+package org.investmentsimspring.services.calculators;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

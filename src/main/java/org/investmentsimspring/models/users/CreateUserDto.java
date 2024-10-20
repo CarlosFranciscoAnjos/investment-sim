@@ -1,13 +1,11 @@
-package org.investmentsimspring.domain.users;
+package org.investmentsimspring.models.users;
 
 import org.investmentsimspring.domain.contracts.Dto;
 
-public class UserDto implements Dto {
+public class CreateUserDto implements Dto {
 
-    public long id;
     public String username;
     public String email;
-    public String hash;
+    public String password;
     public String role;
-
 }

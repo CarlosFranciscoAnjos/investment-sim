@@ -1,7 +1,7 @@
 package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.users.CreateUserDto;
-import org.investmentsimspring.domain.users.UsersService;
+import org.investmentsimspring.models.users.CreateUserDto;
+import org.investmentsimspring.services.UsersService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

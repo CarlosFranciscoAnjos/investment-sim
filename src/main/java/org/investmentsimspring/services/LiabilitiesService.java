@@ -1,8 +1,12 @@
-package org.investmentsimspring.domain.liabilities;
+package org.investmentsimspring.services;
 
 import org.investmentsimspring.database.AssetsRepository;
 import org.investmentsimspring.database.LiabilitiesRepository;
 import org.investmentsimspring.domain.assets.Asset;
+import org.investmentsimspring.domain.liabilities.Liability;
+import org.investmentsimspring.domain.liabilities.LiabilityBuilder;
+import org.investmentsimspring.models.liabilities.CreateLiabilityDto;
+import org.investmentsimspring.models.liabilities.LiabilityDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

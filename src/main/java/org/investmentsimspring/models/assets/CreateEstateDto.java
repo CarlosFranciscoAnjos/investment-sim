@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.assets.estates;
+package org.investmentsimspring.models.assets;
 
 import org.investmentsimspring.domain.contracts.Dto;
 

@@ -1,7 +1,7 @@
 package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.liabilities.CreateLiabilityDto;
-import org.investmentsimspring.domain.liabilities.LiabilitiesService;
+import org.investmentsimspring.models.liabilities.CreateLiabilityDto;
+import org.investmentsimspring.services.LiabilitiesService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

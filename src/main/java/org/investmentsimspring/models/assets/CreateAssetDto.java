@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.assets;
+package org.investmentsimspring.models.assets;
 
 public class CreateAssetDto {
 

@@ -1,7 +1,7 @@
-package org.investmentsimspring.domain.liabilities;
+package org.investmentsimspring.models.liabilities;
 
-import org.investmentsimspring.domain.assets.AssetDto;
 import org.investmentsimspring.domain.contracts.Dto;
+import org.investmentsimspring.models.assets.AssetDto;
 
 public class LiabilityDto implements Dto {
 

@@ -4,12 +4,12 @@ import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Income;
 import org.investmentsimspring.domain.concepts.Value;
 import org.investmentsimspring.domain.contracts.Builder;
-import org.investmentsimspring.domain.containers.Container;
+import org.investmentsimspring.domain.simulations.Simulation;
 
 public class AssetBuilder implements Builder<Asset> {
 
     private long id;
-    private Container container;
+    private Simulation simulation;
     private Description description;
     private Income income;
     private Value value;
@@ -23,8 +23,8 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
-    public AssetBuilder container(Container container) {
-        this.container = container;
+    public AssetBuilder simulation(Simulation simulation) {
+        this.simulation = simulation;
         return this;
     }
 
@@ -45,7 +45,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     @Override
     public Asset build() {
-        return id <= 0 ? new Asset(description, income, value, container) :
-                new Asset(id, description, income, value, container);
+        return id <= 0 ? new Asset(description, income, value, simulation) :
+                new Asset(id, description, income, value, simulation);
     }
 }

@@ -1,10 +1,10 @@
 package org.investmentsimspring.domain.assets;
 
 import org.investmentsimspring.database.AssetsRepository;
-import org.investmentsimspring.database.ContainersRepository;
 import org.investmentsimspring.database.SimulationsRepository;
-import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.simulations.Simulation;
+import org.investmentsimspring.models.assets.AssetDto;
+import org.investmentsimspring.models.assets.CreateAssetDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,12 +13,10 @@ import java.util.List;
 public class AssetsService {
 
     private final AssetsRepository assetsRepo;
-    private final ContainersRepository containersRepo;
     private final SimulationsRepository simulationsRepo;
 
-    public AssetsService(AssetsRepository repo, ContainersRepository containersRepo, SimulationsRepository simulationsRepo) {
+    public AssetsService(AssetsRepository repo, SimulationsRepository simulationsRepo) {
         this.assetsRepo = repo;
-        this.containersRepo = containersRepo;
         this.simulationsRepo = simulationsRepo;
     }
 
@@ -36,14 +34,14 @@ public class AssetsService {
 
     public AssetDto createAsset(CreateAssetDto dto) {
         // fetch container
-        Container container = containersRepo.findById(dto.containerId)
+        Simulation simulation = simulationsRepo.findById(dto.containerId)
                 .orElseThrow(() -> new IllegalArgumentException(String.format("Container with id %d not found", dto.containerId)));
         // asset builder
         AssetBuilder builder = new AssetBuilder();
         builder.description(dto.description);
         builder.income(dto.income);
         builder.value(dto.value);
-        builder.container(container);
+        builder.simulation(simulation);
         // save in repo
         Asset asset = assetsRepo.save(builder.build());
         return asset.toDto();
@@ -54,7 +52,7 @@ public class AssetsService {
         Simulation simulation = simulationsRepo.findById(simulationId)
                 .orElseThrow(() -> new IllegalArgumentException(String.format("Simulation with id %d not found", simulationId)));
         // update dto and call default create asset
-        dto.containerId = simulation.getContainer().getId();
+        dto.containerId = simulation.getId();
         return createAsset(dto);
     }
 

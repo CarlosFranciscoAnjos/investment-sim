@@ -5,6 +5,7 @@ import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Expense;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.contracts.Item;
+import org.investmentsimspring.models.liabilities.LiabilityDto;
 
 import jakarta.persistence.*;
 import java.util.Objects;

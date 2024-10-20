@@ -8,7 +8,7 @@ _@CarlosFranciscoAnjos_
 
 ```bash
 mvn clean
-mvn -Dmaven.test.skip=true package
+mvn -D maven.test.skip=true package
 java -jar target/*.jar
 ```
 

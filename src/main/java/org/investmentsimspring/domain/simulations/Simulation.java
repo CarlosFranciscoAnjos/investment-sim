@@ -1,9 +1,9 @@
 package org.investmentsimspring.domain.simulations;
 
 import org.investmentsimspring.domain.concepts.Description;
-import org.investmentsimspring.domain.containers.Container;
 import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.users.User;
+import org.investmentsimspring.models.simulations.SimulationDto;
 
 import jakarta.persistence.*;
 import java.util.Objects;
@@ -24,23 +24,19 @@ public class Simulation implements Dtoable<SimulationDto> {
     private Description description;
     @ManyToOne
     private User user;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Container container;
 
     protected Simulation() {
     }
 
-    protected Simulation(long id, Description description, User user, Container container) {
+    protected Simulation(long id, Description description, User user) {
         this.id = id;
         this.description = description;
         this.user = user;
-        this.container = container;
     }
 
     public Simulation(Description description, User user) {
         this.description = description;
         this.user = user;
-        this.container = new Container(user);
     }
 
     //region getters & setters
@@ -54,10 +50,6 @@ public class Simulation implements Dtoable<SimulationDto> {
 
     public Description getDescription() {
         return description;
-    }
-
-    public Container getContainer() {
-        return container;
     }
     //endregion
 
@@ -80,7 +72,6 @@ public class Simulation implements Dtoable<SimulationDto> {
                 "id=" + id +
                 ", user=" + user +
                 ", description=" + description +
-                ", container=" + container +
                 '}';
     }
 
@@ -89,7 +80,6 @@ public class Simulation implements Dtoable<SimulationDto> {
         dto.id = this.id;
         dto.user = this.user.toDto();
         dto.description = this.description.getValue();
-        dto.containerDto = this.container.toDto();
         return dto;
     }
 }

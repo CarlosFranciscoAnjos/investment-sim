@@ -1,6 +1,12 @@
-package org.investmentsimspring.domain.users;
+package org.investmentsimspring.services;
 
 import org.investmentsimspring.database.UsersRepository;
+import org.investmentsimspring.domain.users.Email;
+import org.investmentsimspring.domain.users.User;
+import org.investmentsimspring.domain.users.UserBuilder;
+import org.investmentsimspring.domain.users.Username;
+import org.investmentsimspring.models.users.CreateUserDto;
+import org.investmentsimspring.models.users.UserDto;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

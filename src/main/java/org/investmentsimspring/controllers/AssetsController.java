@@ -1,7 +1,7 @@
 package org.investmentsimspring.controllers;
 
 import org.investmentsimspring.domain.assets.AssetsService;
-import org.investmentsimspring.domain.assets.CreateAssetDto;
+import org.investmentsimspring.models.assets.CreateAssetDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

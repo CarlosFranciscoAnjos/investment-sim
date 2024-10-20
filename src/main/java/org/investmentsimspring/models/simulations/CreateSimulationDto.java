@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.simulations;
+package org.investmentsimspring.models.simulations;
 
 public class CreateSimulationDto {
 

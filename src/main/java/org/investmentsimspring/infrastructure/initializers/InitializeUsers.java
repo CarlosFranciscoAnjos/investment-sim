@@ -1,8 +1,8 @@
 package org.investmentsimspring.infrastructure.initializers;
 
 import org.investmentsimspring.domain.security.UserRole;
-import org.investmentsimspring.domain.users.CreateUserDto;
-import org.investmentsimspring.domain.users.UsersService;
+import org.investmentsimspring.models.users.CreateUserDto;
+import org.investmentsimspring.services.UsersService;
 import org.springframework.stereotype.Component;
 
 @Component

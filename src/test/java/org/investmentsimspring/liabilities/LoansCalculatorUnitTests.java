@@ -1,9 +1,10 @@
 package org.investmentsimspring.liabilities;
 
-import org.investmentsimspring.domain.liabilities.loans.LoansCalculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.investmentsimspring.services.calculators.LoansCalculator;
 
 /**
  * Expected result calculated using

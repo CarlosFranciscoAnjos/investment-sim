@@ -1,7 +1,7 @@
 package org.investmentsimspring.controllers;
 
-import org.investmentsimspring.domain.simulations.CreateSimulationDto;
-import org.investmentsimspring.domain.simulations.SimulationsService;
+import org.investmentsimspring.models.simulations.CreateSimulationDto;
+import org.investmentsimspring.services.SimulationsService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

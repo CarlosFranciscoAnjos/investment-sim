@@ -4,6 +4,7 @@ import org.investmentsimspring.domain.contracts.Dtoable;
 import org.investmentsimspring.domain.security.Hash;
 import org.investmentsimspring.domain.security.HashHelper;
 import org.investmentsimspring.domain.security.UserRole;
+import org.investmentsimspring.models.users.UserDto;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

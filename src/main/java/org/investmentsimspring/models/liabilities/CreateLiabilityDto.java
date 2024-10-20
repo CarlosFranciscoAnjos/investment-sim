@@ -1,4 +1,4 @@
-package org.investmentsimspring.domain.liabilities;
+package org.investmentsimspring.models.liabilities;
 
 /**
  * @author Carlos Anjos

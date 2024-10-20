@@ -5,7 +5,8 @@ import org.investmentsimspring.domain.concepts.Address;
 import org.investmentsimspring.domain.concepts.Description;
 import org.investmentsimspring.domain.concepts.Income;
 import org.investmentsimspring.domain.concepts.Value;
-import org.investmentsimspring.domain.containers.Container;
+import org.investmentsimspring.domain.simulations.Simulation;
+import org.investmentsimspring.models.assets.EstateDto;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -30,9 +31,9 @@ public class Estate extends Asset {
         super();
     }
 
-    public Estate(Description description, Income income, Value value, Container container,
+    public Estate(Description description, Income income, Value value, Simulation simulation,
                   PropertyType type, Address address, Area area) {
-        super(description, income, value, container);
+        super(description, income, value, simulation);
         this.address = address;
         this.type = type;
         this.area = area;
